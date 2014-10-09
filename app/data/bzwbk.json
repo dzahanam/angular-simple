@@ -1,0 +1,10 @@
+[
+{"group": "Informacje","name": "Historia transakcji","value": "Tak"},
+{"group": "Informacje","name": "Saldo rachunków","value": "Tak"},
+{"group": "Informacje","name": "Informacje o kartach","value": "Tak"},
+{"group": "Informacje","name": "Szczegóły posiadanych rachunków","value": "Tak"},
+{"group": "Informacje","name": "Wyciąg rachunków","value": "Tak"},
+{"group": "Informacje","name": "Eksport danych","value": "Tak"},
+{"group": "Informacje","name": "Harmonogram  spłaty kredytów","value": "Tak"},
+{"group": "Informacje","name": "Złożone wnioski","value": "Tak"}
+]

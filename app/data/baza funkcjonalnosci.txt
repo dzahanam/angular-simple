@@ -1,0 +1,56 @@
+·         Informacje
+o   Saldo
+o   Historia transakcji
+o   Szczegóły posiadanych produktów
+o   Wyciąg elektroniczny
+o   Blokady na karcie
+·         Transakcje
+o   Przelew na rachunek własny
+o   Przelew na rachunek zdefiniowany obcy
+o   Przelew na rachunek niezdefiniowany obcy
+o   Przelew cykliczny
+o    Przelew na ZUS i US
+o   Przelew z karty kredytowej
+o   Express Elixir
+o   Blue Cash
+o   Przelew natychmiastowy (przelew24)
+o   Przelew natychmiastowy z Karty Kredytowej
+o   Przelew na numer telefonu
+o   Wypłata z bankomatu bez karty
+o   Przelew QR
+o   eFaktura
+o   Spłata Karty Kredytowej
+o   Doładowanie GSM
+o   Western Union
+·         Sprzedaż wewnętrzna (sprzedaż online/formularz kontaktowy/brak)
+o   Rachunek osobisty/firmowy
+o   Kredyt gotówkowy
+o   Karta kredytowa
+o   Zwiększenie limitu karty kredytowej
+o   Limit w koncie
+o   Zwiększenie limitu w koncie
+o   Karta debetowa
+o   Ratio
+o   Konto oszczędnościowe
+o   Lokata
+·         Sprzedaż zewnętrzna
+o   Rachunek osobisty/firmowy
+o   Kredyt gotówkowy
+o   Karta kredytowa
+o   Zwiększenie limitu karty kredytowej
+o   Limit w koncie
+o   Zwiększenie limitu w koncie
+o   Karta debetowa
+o   Ratio
+o   Konto oszczędnościowe
+o   Lokata
+·         Inwestycje
+o   Saldo
+o   Operacje
+o   Wpłata środków na rachunek inw.
+o   OFE
+o   Historia transakcji
+·         Usługi dodatkowe
+o    
+·       Zarządzanie kontem użytkownika
+o    

@@ -1,0 +1,62 @@
+[
+{
+"group": "Logowanie",
+"name": "Logowanie",
+"snippet": "ile kroków"
+},
+{
+"group": "Transakcje",
+"name": "Przelewy na rach obcy",
+"snippet": "Tak/Nie/Nie wiem."
+},
+{
+"group": "Transakcje",
+"name": "Przelew z urządzenia zaufanego",
+"snippet": "Tak/Nie/Nie wiem."
+},
+{
+"group": "Informacje",
+"name": "Historia transakcji",
+"snippet": "Tak/Nie/Nie wiem."
+}
+,
+{
+"group": "Informacje",
+"name": "Saldo rachunków",
+"snippet": "Tak/Nie/Nie wiem."
+},
+{
+"group": "Informacje",
+"name": "Informacje o kartach",
+"snippet": "Tak/Nie/Nie wiem."
+},
+{
+"group": "Informacje",
+"name": "Szczegóły posiadanych rachunków",
+"snippet": "Tak/Nie/Nie wiem."
+}
+,
+{
+"group": "Informacje",
+"name": "Wyciąg rachunków",
+"snippet": "Tak/Nie/Nie wiem."
+}
+,
+{
+"group": "Informacje",
+"name": "Eksport danych",
+"snippet": "Tak/Nie/Nie wiem."
+}
+,
+{
+"group": "Informacje",
+"name": "Harmonogram  spłaty kredytów",
+"snippet": "Tak/Nie/Nie wiem."
+}
+,
+{
+"group": "Informacje",
+"name": "Złożone wnioski",
+"snippet": "Tak/Nie/Nie wiem."
+}
+]
