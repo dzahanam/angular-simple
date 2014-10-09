@@ -13,40 +13,45 @@
 		<li><a href="#">CORPO</a></li>
       </ul>
 	</div>
-   Search:<input ng-model="query" value="Search">
-   <select class="btn btn-primary dropdown-toggle" ng-model="query" ng-options="feature.group for feature in bzwbk_globals" value="Kategoria"></select>
-   <button type="button" class="btn btn-primary dropdown-toggle" ng-disabled="disabled">Wyczyść</button>
+   Search:<input ng-model="feature" value="Search">
+   <select class="btn btn-primary dropdown-toggle" ng-model="feature" ng-options="feature.group for feature in bzwbk_globals" value="Kategoria"></select>
+   <button type="button" class="btn btn-primary dropdown-toggle" ng-click="feature=null">Wyczyść</button>
  </div>
 
 <table class="table table-striped">
   <thead><tr>
 	<th>BANK</th>
-    <th ng-repeat="feature in bzwbk_globals| filter : query">{{ feature.group }}</th>
+    <th ng-repeat="feature in bzwbk_globals| filter : feature">
+		{{ feature.group }}
+		<button type="button" class="btn btn-primary" ng-model="singleModel" btn-checkbox btn-checkbox-true="1" btn-checkbox-false="0">
+        Raport
+		</button>
+	</th>
   </tr></thead>
   <tbody>
   <tr>
-	<td>BZWBK</td>
-    <td ng-repeat="row in bzwbk_globals| filter : query"><a href="#table-desc">{{ row.value }}</a></td>
+	<td><a ng-href="#/bank">BZWBK</a></td>
+    <td ng-repeat="row in bzwbk_globals| filter : feature"><a ng-href="#/category">{{ row.value }}</a></td>
   </tr>
   <tr>
 	<td>ING</td>
-    <td ng-repeat="row in bzwbk_globals| filter : query"><a href="#">{{ row.value }}</a></td>
+    <td ng-repeat="row in bzwbk_globals| filter : feature"><a href="#">{{ row.value }}</a></td>
   </tr>
   <tr>
 	<td>mBank</td>
-    <td ng-repeat="row in bzwbk_globals| filter : query"><a href="#">{{ row.value }}</a></td>
+    <td ng-repeat="row in bzwbk_globals| filter : feature"><a href="#">{{ row.value }}</a></td>
   </tr>
   <tr>
 	<td>PKO SA</td>
-    <td ng-repeat="row in bzwbk_globals| filter : query"><a href="#">{{ row.value }}</a></td>
+    <td ng-repeat="row in bzwbk_globals| filter : feature"><a href="#">{{ row.value }}</a></td>
   </tr>
   <tr>
 	<td>BGŻ</td>
-    <td ng-repeat="row in bzwbk_globals| filter : query"><a href="#">{{ row.value }}</a></td>
+    <td ng-repeat="row in bzwbk_globals| filter : feature"><a href="#">{{ row.value }}</a></td>
   </tr>
   <tr>
 	<td>Getin</td>
-    <td ng-repeat="row in bzwbk_globals| filter : query"><a href="#">{{ row.value }}</a></td>
+    <td ng-repeat="row in bzwbk_globals| filter : feature"><a href="#">{{ row.value }}</a></td>
   </tr>
   </tbody>
 </table>
@@ -60,28 +65,4 @@
       </ul>
 </div>
 
-<div class="row marketing">
-   Search: <input ng-model="query2">
-   <select ng-model="feature" ng-options="feature.name for feature in bzwbk"></select>
- </div>
-
-<table id="table-desc" class="table table-striped table-desc">
-  <thead><tr>
-    <th>BANK</th>
-    <td ng-repeat="row in bzwbk| filter:feature">{{ row.name }}</th>
-  </tr></thead>
-  <tbody><tr>
-	<td>BZWBK</td>
-    <td ng-repeat="row in bzwbk| filter:feature">{{ row.value }}</td>
-  </tr></tbody>
-</table>
-<div class="btn-group" dropdown is-open="status2.isopen">
-      <button type="button2" class="btn btn-primary dropdown-toggle" ng-disabled="disabled">
-        Eksport <span class="caret"></span>
-      </button>
-      <ul class="dropdown-menu" role="menu">
-        <li><a href="#">PDF</a></li>
-        <li><a href="#">XLS</a></li>
-      </ul>
-</div>
 <br/><br/>

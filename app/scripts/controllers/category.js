@@ -2,15 +2,15 @@
 
 /**
  * @ngdoc function
- * @name angularSimpleApp.controller:MainCtrl
+ * @name angularSimpleApp.controller:CategoryCtrl
  * @description
- * # MainCtrl
+ * # CategoryCtrl
  * Controller of the angularSimpleApp
  */
 angular.module('angularSimpleApp')
-  .controller('MainCtrl', function ($scope, $http) {
+  .controller('CategoryCtrl', function ($scope, $http) {
   
-	$http.get('data/features.json').success(function(data) {
+$http.get('data/features.json').success(function(data) {
 		$scope.features = data;
 	});
 	
@@ -21,4 +21,9 @@ angular.module('angularSimpleApp')
 	$http.get('data/bzwbk_globals.json').success(function(data2) {
 		$scope.bzwbk_globals = data2;
 	});
+	
+	$http.get('data/bzwbk.json').success(function(data) {
+		$scope.bzwbk = data;
+	});
+
   });
