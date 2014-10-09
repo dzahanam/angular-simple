@@ -21,4 +21,9 @@ angular.module('angularSimpleApp')
 	$http.get('data/bzwbk_globals.json').success(function(data2) {
 		$scope.bzwbk_globals = data2;
 	});
+	
+	$http.get('data/feeds.json').success(function(data2) {
+		$scope.feeds = data2;
+	});
+	
   });

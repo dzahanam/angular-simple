@@ -32,6 +32,10 @@ body {
   background-color: grey;
 }
 
+.news {
+  max-width: 90%;
+}
+
 /* Customize container */
 @media (min-width: 768px) {
   .container {
@@ -77,4 +81,12 @@ body {
   .jumbotron {
     border-bottom: 0;
   }
+}
+
+.logout {
+  color: red;
+}
+
+#logo {
+  width: 10%;
 }

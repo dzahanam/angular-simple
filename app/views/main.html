@@ -1,8 +1,22 @@
-<div class="jumbotron">
-  <p><h4>News feed</h4><span class="glyphicon glyphicon-ok"></span></p>
+<ol class="breadcrumb">
+  <li><a href="#">Analizy</a></li>
+  <li><a href="#">TOP 6 Banków</a></li>
+  <li class="active">klienci indywidualnii</li>
+</ol>
+
+<div class="row well">
+           <span ng-repeat="item in feeds" ng-animate="'animate'">
+               <span class="glyphicon glyphicon-ok"></span>
+			   <a class="small" ng-click="isCollapsed = !isCollapsed" target="_blank">{{item.title}}</a>
+               </br>
+			   <div collapse="!isCollapsed">
+			     <p>{{item.contentSnippet}} <a href="{{item.link}}">źródło: PR News</a><p>
+			   </div>
+               </br>
+           </span>
 </div>
 
-<div class="row marketing">
+<div class="row well">
    <div class="btn-group" dropdown is-open="segment.isopen">
       <button type="button" class="btn btn-primary dropdown-toggle" ng-disabled="disabled">
         Wybór segmentu <span class="caret"></span>
@@ -13,12 +27,13 @@
 		<li><a href="#">CORPO</a></li>
       </ul>
 	</div>
-   Search:<input ng-model="feature" value="Search">
+   Wyszukaj:<input ng-model="feature" value="Search">
    <select class="btn btn-primary dropdown-toggle" ng-model="feature" ng-options="feature.group for feature in bzwbk_globals" value="Kategoria"></select>
    <button type="button" class="btn btn-primary dropdown-toggle" ng-click="feature=null">Wyczyść</button>
  </div>
 
-<table class="table table-striped">
+<div class="row well">
+ <table class="table table-striped">
   <thead><tr>
 	<th>BANK</th>
     <th ng-repeat="feature in bzwbk_globals| filter : feature">
@@ -55,7 +70,7 @@
   </tr>
   </tbody>
 </table>
-<div class="btn-group" dropdown is-open="status.isopen">
+ <div class="btn-group" dropdown is-open="status.isopen">
       <button type="button" class="btn btn-primary dropdown-toggle" ng-disabled="disabled">
         Eksport <span class="caret"></span>
       </button>
@@ -63,6 +78,7 @@
         <li><a href="#">PDF</a></li>
         <li><a href="#">XLS</a></li>
       </ul>
+ </div>
 </div>
 
 <br/><br/>

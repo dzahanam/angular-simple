@@ -5,7 +5,7 @@
     <title></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- Place favicon.ico and	 apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
@@ -21,20 +21,28 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div class="container">
+    <div class="container main">
       <div class="header">
-		<img src="images/logo.png"></img>
+		<img src="images/logo.png" id="logo"></img>
         <ul class="nav nav-pills pull-right">
-          <li class="active"><a ng-href="#">Home</a></li>
-          <li><a ng-href="#/about">About</a></li>
-          <li><a ng-href="#">Contact</a></li>
+          <li class="active"><a ng-href="#">Analizy</a></li>
+		  <li><a ng-href="#/news">Powiadomienia</a></li>
+		  <li><a ng-href="#/">Instytucja</a></li>
+		  <li><a ng-href="#/settings">Twoja profil</a></li>
+		  <li><a ng-href="#/stats">Statystyki</a></li>
+          <li><a ng-href="#/about">O nas</a></li>
+          <li class="logout"><a ng-href="#">Wyloguj</a></li>
         </ul>
       </div>
 
       <div ng-view=""></div>
 	  
-      <div class="footer">
+      <div class="footer marketing">
 		<p>Follow US</p>
+		<ul class="nav nav-pills pull-right">
+			<li class="active"><a href="#">Kontakt <span class="badge">600-123-123</span></a></li>
+			<li class="active"><a href="#">O nas</a></li>
+		</ul>
         <div class="bs-social container">
                     <a href="https://twitter.com/share" class="twitter-share-button"
                        data-hashtags="obserwatorium.biz">Tweet</a>
