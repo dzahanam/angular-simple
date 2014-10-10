@@ -6,7 +6,7 @@
 
 <div class="row well">
            <span ng-repeat="item in feeds" ng-animate="'animate'">
-               <span class="glyphicon glyphicon-ok"></span>
+               <span class="glyphicon glyphicon-edit"></span>
 			   <a class="small" ng-click="isCollapsed = !isCollapsed" target="_blank">{{item.title}}</a>
                </br>
 			   <div collapse="!isCollapsed">
@@ -46,7 +46,7 @@
   <tbody>
   <tr>
 	<td><a ng-href="#/bank">BZWBK</a></td>
-    <td ng-repeat="row in bzwbk_globals| filter : feature"><a ng-href="#/category">{{ row.value }}</a></td>
+    <td ng-repeat="row in bzwbk_globals| filter : feature"><a ng-href="#/category">{{ row.value }} <span class="badge" ng-show="row.LU">!</span></a></td>
   </tr>
   <tr>
 	<td>ING</td>
@@ -74,9 +74,9 @@
       <button type="button" class="btn btn-primary dropdown-toggle" ng-disabled="disabled">
         Eksport <span class="caret"></span>
       </button>
-      <ul class="dropdown-menu" role="menu">
-        <li><a href="#">PDF</a></li>
-        <li><a href="#">XLS</a></li>
+      <ul class="dropdown-menu" role="menu">	
+        <li><a href="#">PDF <span class="glyphicon glyphicon-save"></span></a></li>
+        <li><a href="#">XLS <span class="glyphicon glyphicon-save"></span></a></li>
       </ul>
  </div>
 </div>

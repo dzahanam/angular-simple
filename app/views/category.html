@@ -1,31 +1,44 @@
 <p>This is the Category view.</p>
 
 
-<div class="row marketing">  
+<div class="row well">  
    Search:<input ng-model="feature" value="Search">
    <select class="btn btn-primary dropdown-toggle" ng-model="feature" ng-options="feature.name for feature in bzwbk" value="Funkcjonalność"></select>
    <button type="button" class="btn btn-primary dropdown-toggle" ng-click="feature=null">Wyczyść</button>
- </div>
+</div>
 
-<table id="table-desc" class="table table-striped table-desc">
+<div class="row well">
+ <table id="table-desc" class="table table-striped table-desc">
   <thead><tr>
     <th>BANK</th>
-    <td ng-repeat="row in bzwbk| filter:feature">{{ row.name }}</th>
+    <th ng-repeat="row in bzwbk| filter:feature">{{ row.name }}</th>
   </tr></thead>
-  <tbody><tr>
-	<td>BZWBK</td>
-    <td ng-repeat="row in bzwbk| filter:feature">{{ row.value }}</td>
-  </tr></tbody>
-</table>
-<div class="btn-group" dropdown is-open="status2.isopen">
+  <tbody>
+	<tr>
+		<td>BZWBK</td>
+		<td ng-repeat="row in bzwbk| filter:feature"><a ng-href="#/process">{{ row.value }} <span class="badge" ng-show="row.LU">!</span></a></td>
+	</tr>
+	<tr>
+		<td>PKO SA</td>
+		<td ng-repeat="row in bzwbk| filter:feature">{{ row.value }}</td>
+	</tr>
+	<tr>
+		<td>mBank</td>
+		<td ng-repeat="row in bzwbk| filter:feature">{{ row.value }}</td>
+	</tr>
+  </tbody>
+ </table>
+ <div class="btn-group" dropdown is-open="status2.isopen">
       <button type="button2" class="btn btn-primary dropdown-toggle" ng-disabled="disabled">
         Eksport <span class="caret"></span>
       </button>
       <ul class="dropdown-menu" role="menu">
-        <li><a href="#">PDF</a></li>
-        <li><a href="#">XLS</a></li>
+        <li><a href="#">PDF <span class="glyphicon glyphicon-save"></span></a></li>
+        <li><a href="#">XLS <span class="glyphicon glyphicon-save"></span></a></li>
       </ul>
+ </div>
 </div>
+<br/><br/>
 
 <div class="row jumbotron">
  wykresy

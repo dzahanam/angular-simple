@@ -87,6 +87,10 @@ body {
   color: red;
 }
 
+img#thumbnail {
+  height: 400px;
+}
+
 #logo {
   width: 10%;
 }
