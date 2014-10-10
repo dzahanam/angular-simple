@@ -1,8 +1,12 @@
-<p>This is the Category view.</p>
+<ol class="breadcrumb">
+  <li><a href="#">Analizy</a></li>
+  <li><a href="#">TOP 6 Banków - klienci indywidualnii</a></li>
+  <li class="active">Widok kategorii</li>
+</ol>
 
 
 <div class="row well">  
-   Search:<input ng-model="feature" value="Search">
+   Wyszukaj:<input ng-model="feature" value="Search">
    <select class="btn btn-primary dropdown-toggle" ng-model="feature" ng-options="feature.name for feature in bzwbk" value="Funkcjonalność"></select>
    <button type="button" class="btn btn-primary dropdown-toggle" ng-click="feature=null">Wyczyść</button>
 </div>
@@ -16,7 +20,7 @@
   <tbody>
 	<tr>
 		<td>BZWBK</td>
-		<td ng-repeat="row in bzwbk| filter:feature"><a ng-href="#/process">{{ row.value }} <span class="badge" ng-show="row.LU">!</span></a></td>
+		<td ng-repeat="row in bzwbk| filter:feature"><a ng-href="#/process">{{ row.value }} <span popover="Dodano nowe pole!" popover-trigger="mouseenter" class="badge" ng-show="row.LU">!</span></a></td>
 	</tr>
 	<tr>
 		<td>PKO SA</td>

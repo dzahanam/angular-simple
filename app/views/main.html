@@ -46,7 +46,7 @@
   <tbody>
   <tr>
 	<td><a ng-href="#/bank">BZWBK</a></td>
-    <td ng-repeat="row in bzwbk_globals| filter : feature"><a ng-href="#/category">{{ row.value }} <span class="badge" ng-show="row.LU">!</span></a></td>
+    <td ng-repeat="row in bzwbk_globals| filter : feature"><a ng-href="#/category">{{ row.value }} <span popover="Zmiana od twojej ostatniej wizyty!" popover-trigger="mouseenter" class="badge" ng-show="row.LU">!</span></a></td>
   </tr>
   <tr>
 	<td>ING</td>
