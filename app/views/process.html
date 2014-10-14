@@ -5,29 +5,83 @@
   <li class="active">Widok Sprzedaż wewnętrzna - konto walutowe</li>
 </ol>
 
+<!-- thumb navigation carousel -->
+    <div class="col-md-12 hidden-sm hidden-xs" id="slider-thumbs">
+        
+            <!-- thumb navigation carousel items -->
+          <ul class="list-inline">
+          <li> <a id="carousel-selector-0" class="selected">
+            <img src="http://placehold.it/80x60&amp;text=one" class="img-responsive">
+          </a></li>
+          <li> <a id="carousel-selector-1">
+            <img src="http://placehold.it/80x60&amp;text=two" class="img-responsive">
+          </a></li>
+          <li> <a id="carousel-selector-2">
+            <img src="http://placehold.it/80x60&amp;text=three" class="img-responsive">
+          </a></li>
+          <li> <a id="carousel-selector-3">
+            <img src="http://placehold.it/80x60&amp;text=four" class="img-responsive">
+          </a></li>
+                <li> <a id="carousel-selector-4">
+            <img src="http://placehold.it/80x60&amp;text=five" class="img-responsive">
+          </a></li>
+          <li> <a id="carousel-selector-5">
+            <img src="http://placehold.it/80x60&amp;text=six" class="img-responsive">
+          </a></li>
+          <li> <a id="carousel-selector-6">
+            <img src="http://placehold.it/80x60&amp;text=seven" class="img-responsive">
+          </a></li>
+          <li> <a id="carousel-selector-7">
+            <img src="http://placehold.it/80x60&amp;text=eight" class="img-responsive">
+          </a></li>
+            </ul>
+        
+    </div>
+  
+  
+    <!-- main slider carousel -->
+    <div class="row">
+        <div class="col-md-12" id="slider">
+            
+                <div class="col-md-12" id="carousel-bounding-box">
+                    <div id="myCarousel" class="carousel slide">
+                        <!-- main slider carousel items -->
+                        <div class="carousel-inner">
+                            <div class="active item" data-slide-number="0">
+                                <img ng-src="images\data\bzwbk\indywidualny\sprzedaz_wewn\konto_walutowe\1.png" class="img-responsive">
+                            </div>
+                            <div class="item" data-slide-number="1">
+                              <img ng-src="images\data\bzwbk\indywidualny\sprzedaz_wewn\konto_walutowe\2.png" class="img-responsive">
+                            </div>
+                            <div class="item" data-slide-number="2">
+                                <img ng-src="images\data\bzwbk\indywidualny\sprzedaz_wewn\konto_walutowe\3.png" class="img-responsive">
+                            </div>
+                            <div class="item" data-slide-number="3">
+                                <img ng-src="images\data\bzwbk\indywidualny\sprzedaz_wewn\konto_walutowe\4.png" class="img-responsive">
+                            </div>
+                            <div class="item" data-slide-number="4">
+                                <img ng-src="images\data\bzwbk\indywidualny\sprzedaz_wewn\konto_walutowe\5.png" class="img-responsive">
+                            </div>
+                            <div class="item" data-slide-number="5">
+                                <img ng-src="images\data\bzwbk\indywidualny\sprzedaz_wewn\konto_walutowe\6.png" class="img-responsive">
+                            </div>
+                            <div class="item" data-slide-number="6">
+                                <img ng-src="images\data\bzwbk\indywidualny\sprzedaz_wewn\konto_walutowe\7.png" class="img-responsive">
+                            </div>
+                            <div class="item" data-slide-number="7">
+                                <img ng-src="images\data\bzwbk\indywidualny\sprzedaz_wewn\konto_walutowe\8.png" class="img-responsive">
+                            </div>
+                        </div>
+                        <!-- main slider carousel nav controls --> <a class="carousel-control left" href="#myCarousel" data-slide="prev">‹</a>
 
-<img ng-src="images\data\bzwbk\indywidualny\sprzedaz_wewn\konto_walutowe\4.png" id="thumbnail"></img><br/><br/>
+                        <a class="carousel-control right" href="#myCarousel" data-slide="next">›</a>
+                    </div>
+                </div>
 
-  <!--div style="height: 305px">
-    <carousel interval="myInterval">
-      <slide ng-repeat="slide in slides" active="slide.active">
-        <img ng-src="{{slide.image}}" style="margin:auto;">
-        <div class="carousel-caption">
-          <h4>Slide {{$index}}</h4>
-          <p>{{slide.text}}</p>
         </div>
-      </slide>
-    </carousel>
-  </div>
-  <div class="row">
-    <div class="col-md-6">
-      <button type="button" class="btn btn-info" ng-click="addSlide()">Add Slide</button>
     </div>
-    <div class="col-md-6">
-      Interval, in milliseconds: <input type="number" class="form-control" ng-model="myInterval">
-      <br />Enter a negative number to stop the interval.
-    </div>
-  </div-->
+    <!--/main slider carousel-->
+
 
 <div class="row jumbotron">
  Opis:
@@ -47,3 +101,27 @@
 <div class="row jumbotron">
  Ostatnie zmiany
 </div>
+
+<script>
+$('#myCarousel').carousel({
+    interval: 6000
+});
+
+// handles the carousel thumbnails
+$('[id^=carousel-selector-]').click( function(){
+  var id_selector = $(this).attr("id");
+  var id = id_selector.substr(id_selector.length -1);
+  id = parseInt(id);
+  $('#myCarousel').carousel(id);
+  $('[id^=carousel-selector-]').removeClass('selected');
+  $(this).addClass('selected');
+});
+
+// when the carousel slides, auto update
+$('#myCarousel').on('slid', function (e) {
+  var id = $('.item.active').data('slide-number');
+  id = parseInt(id);
+  $('[id^=carousel-selector-]').removeClass('selected');
+  $('[id=carousel-selector-'+id+']').addClass('selected');
+});
+</script>
