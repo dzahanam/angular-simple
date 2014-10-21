@@ -9,21 +9,25 @@
  */
 angular.module('angularSimpleApp')
   .controller('CategoryCtrl', function ($scope, $http) {
-  
-$http.get('data/features.json').success(function(data) {
-		$scope.features = data;
-	});
 	
-	$http.get('data/banks.json').success(function(data2) {
-		$scope.banks = data2;
-	});
-
-	$http.get('data/bzwbk_globals.json').success(function(data2) {
-		$scope.bzwbk_globals = data2;
-	});
-	
-	$http.get('data/bzwbk.json').success(function(data) {
+	$http.get('data/internet/informacje/bzwbk.json').success(function(data) {
 		$scope.bzwbk = data;
+	});
+	
+	$http.get('data/internet/informacje/orange.json').success(function(data2) {
+		$scope.orange = data2;
+	});
+	
+	$http.get('data/internet/informacje/ing.json').success(function(data2) {
+		$scope.ing = data2;
+	});
+	
+	$http.get('data/internet/informacje/smart.json').success(function(data2) {
+		$scope.smart = data2;
+	});
+	
+	$http.get('data/internet/informacje/millenium.json').success(function(data2) {
+		$scope.millenium = data2;
 	});
 
   });

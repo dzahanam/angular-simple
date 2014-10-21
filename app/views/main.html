@@ -1,20 +1,45 @@
 <ol class="breadcrumb">
   <li><a href="#">Analizy</a></li>
-  <li><a href="#">TOP 6 Banków</a></li>
+  <li><a href="#">TOP 5 Banków</a></li>
   <li class="active">klienci indywidualnii</li>
 </ol>
 
-<div class="row well">
+<!--div class="row well">
            <span ng-repeat="item in feeds" ng-animate="'animate'">
                <span class="glyphicon glyphicon-edit"></span>
 			   <a class="small" ng-click="isCollapsed = !isCollapsed" target="_blank">{{item.title}}</a>
                </br>
-			   <div collapse="!isCollapsed">
+			   <div collapse="!isCollapsed" >
 			     <p>{{item.contentSnippet}} <a href="{{item.link}}">źródło: PR News</a><p>
 			   </div>
                </br>
            </span>
-</div>
+</div-->
+
+<tabset>
+	<tab heading="PR News">
+           <span ng-repeat="item in feeds" ng-animate="'animate'">
+               <span class="glyphicon glyphicon-edit"></span>
+			   <a class="small" ng-click="isCollapsed = !isCollapsed" target="_blank">{{item.title}}</a>
+               </br>
+			   <div collapse="!isCollapsed" >
+			     <p>{{item.contentSnippet}} <a href="{{item.link}}">źródło: PR News</a><p>
+			   </div>
+               </br>
+           </span>
+	</tab>
+	<tab heading="Twój log">
+           <span ng-repeat="item in feeds" ng-animate="'animate'">
+               <span class="glyphicon glyphicon-edit"></span>
+			   <a class="small" ng-click="isCollapsed = !isCollapsed" target="_blank">{{item.title}}</a>
+               </br>
+			   <div collapse="!isCollapsed" >
+			     <p>{{item.contentSnippet}} <a href="{{item.link}}">źródło: PR News</a><p>
+			   </div>
+               </br>
+           </span>
+	</tab>
+</tabset>
 
 <div class="row well">
    <div class="btn-group" dropdown is-open="segment.isopen">
@@ -50,23 +75,19 @@
   </tr>
   <tr>
 	<td>ING</td>
-    <td ng-repeat="row in bzwbk_globals| filter : feature"><a href="#">{{ row.value }}</a></td>
+    <td ng-repeat="row in ing| filter : feature"><a href="#/category/row={{row.link}}">{{ row.value }} <span popover="Zmiana od twojej ostatniej wizyty!" popover-trigger="mouseenter" class="badge" ng-show="row.LU">!</span></a></td>
   </tr>
   <tr>
-	<td>mBank</td>
-    <td ng-repeat="row in bzwbk_globals| filter : feature"><a href="#">{{ row.value }}</a></td>
+	<td>Orange Finanse<br/> (mBank)</td>
+    <td ng-repeat="row in orange| filter : feature"><a href="#">{{ row.value }} <span popover="Zmiana od twojej ostatniej wizyty!" popover-trigger="mouseenter" class="badge" ng-show="row.LU">!</span></a></td>
   </tr>
   <tr>
-	<td>PKO SA</td>
-    <td ng-repeat="row in bzwbk_globals| filter : feature"><a href="#">{{ row.value }}</a></td>
+	<td>Millenium</td>
+    <td ng-repeat="row in millenium| filter : feature"><a href="#">{{ row.value }} <span popover="Zmiana od twojej ostatniej wizyty!" popover-trigger="mouseenter" class="badge" ng-show="row.LU">!</span></a></td>
   </tr>
   <tr>
-	<td>BGŻ</td>
-    <td ng-repeat="row in bzwbk_globals| filter : feature"><a href="#">{{ row.value }}</a></td>
-  </tr>
-  <tr>
-	<td>Getin</td>
-    <td ng-repeat="row in bzwbk_globals| filter : feature"><a href="#">{{ row.value }}</a></td>
+	<td>Smartbank</td>
+    <td ng-repeat="row in smart| filter : feature"><a href="#">{{ row.value }} <span popover="Zmiana od twojej ostatniej wizyty!" popover-trigger="mouseenter" class="badge" ng-show="row.LU">!</span></a></td>
   </tr>
   </tbody>
 </table>

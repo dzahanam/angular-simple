@@ -1,6 +1,6 @@
 <ol class="breadcrumb">
   <li><a href="#">Analizy</a></li>
-  <li><a href="#">TOP 6 Banków - klienci indywidualnii</a></li>
+  <li><a href="#">TOP 5 Banków - klienci indywidualnii</a></li>
   <li class="active">Widok kategorii</li>
 </ol>
 
@@ -18,18 +18,26 @@
     <th ng-repeat="row in bzwbk| filter:feature">{{ row.name }}</th>
   </tr></thead>
   <tbody>
-	<tr>
+	  <tr>
 		<td>BZWBK</td>
 		<td ng-repeat="row in bzwbk| filter:feature"><a ng-href="#/process">{{ row.value }} <span popover="Dodano nowe pole!" popover-trigger="mouseenter" class="badge" ng-show="row.LU">!</span></a></td>
-	</tr>
-	<tr>
-		<td>PKO SA</td>
-		<td ng-repeat="row in bzwbk| filter:feature">{{ row.value }}</td>
-	</tr>
-	<tr>
-		<td>mBank</td>
-		<td ng-repeat="row in bzwbk| filter:feature">{{ row.value }}</td>
-	</tr>
+	  </tr>
+	  <tr>
+		<td>ING</td>
+		<td ng-repeat="row in ing| filter : feature"><a ng-href="#/process">{{ row.value }} <span popover="Dodano nowe pole!" popover-trigger="mouseenter" class="badge" ng-show="row.LU">!</span></a></td>
+	  </tr>
+	  <tr>
+		<td>Orange Finanse<br/> (mBank)</td>
+		<td ng-repeat="row in orange| filter : feature"><a ng-href="#/process">{{ row.value }} <span popover="Dodano nowe pole!" popover-trigger="mouseenter" class="badge" ng-show="row.LU">!</span></a></td>
+	  </tr>
+	  <tr>
+		<td>Millenium</td>
+		<td ng-repeat="row in millenium| filter : feature"><a ng-href="#/process">{{ row.value }} <span popover="Dodano nowe pole!" popover-trigger="mouseenter" class="badge" ng-show="row.LU">!</span></a></td>
+	  </tr>
+	  <tr>
+		<td>Smartbank</td>
+		<td ng-repeat="row in smart| filter : feature"><a ng-href="#/process">{{ row.value }} <span popover="Dodano nowe pole!" popover-trigger="mouseenter" class="badge" ng-show="row.LU">!</span></a></td>
+	  </tr>
   </tbody>
  </table>
  <div class="btn-group" dropdown is-open="status2.isopen">
