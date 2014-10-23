@@ -1,6 +1,7 @@
 <!doctype html>
 <html class="no-js">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <title></title>
     <meta name="description" content="">
@@ -14,39 +15,49 @@
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
-  </head>
-  <body ng-app="angularSimpleApp">
+</head>
+
+<body ng-app="angularSimpleApp">
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
     <!-- Add your site or application content here -->
     <div class="container main">
-      <div class="header">
-		<img src="images/logo.png" id="logo"></img>
-        <ul class="nav nav-pills pull-right">
-          <li class="active"><a ng-href="#">Analizy</a></li>
-		  <li><a ng-href="#/news">Powiadomienia</a></li>
-		  <li><a ng-href="#/">Instytucja</a></li>
-		  <li><a ng-href="#/settings">Twoja profil</a></li>
-		  <li><a ng-href="#/stats">Statystyki</a></li>
-          <li><a ng-href="#/about">O nas</a></li>
-          <li class="logout"><a ng-href="#">Wyloguj</a></li>
-        </ul>
-      </div>
+        <div class="header">
+            <img src="images/logo.png" id="logo"></img>
+            <ul class="nav nav-pills pull-right">
+                <li class="active"><a ng-href="#/main">Analizy</a>
+                </li>
+                <li><a ng-href="#/news">Powiadomienia</a>
+                </li>
+                <li><a ng-href="#/">Instytucja</a>
+                </li>
+                <li><a ng-href="#/settings">Twoja profil</a>
+                </li>
+                <li><a ng-href="#/stats">Statystyki</a>
+                </li>
+                <li><a ng-href="#/about">O nas</a>
+                </li>
+                <li class="logout"><a ng-href="#">Wyloguj</a>
+                </li>
+            </ul>
+        </div>
 
-      <div ng-view=""></div>
-	  
-      <div class="footer marketing">
-		<p>Follow US</p>
-		<ul class="nav nav-pills pull-right">
-			<li class="active"><a href="#">Kontakt <span class="badge">600-123-123</span></a></li>
-			<li class="active"><a href="#">O nas</a></li>
-		</ul>
-        <div class="bs-social container">
-                    <a href="https://twitter.com/share" class="twitter-share-button"
-                       data-hashtags="obserwatorium.biz">Tweet</a>
-                    <script>!function (d, s, id) {
+        <div ng-view=""></div>
+
+        <div class="footer marketing">
+            <p>Follow US</p>
+            <ul class="nav nav-pills pull-right">
+                <li class="active"><a href="#">Kontakt <span class="badge">600-123-123</span></a>
+                </li>
+                <li class="active"><a href="#">O nas</a>
+                </li>
+            </ul>
+            <div class="bs-social container">
+                <a href="https://twitter.com/share" class="twitter-share-button" data-hashtags="obserwatorium.biz">Tweet</a>
+                <script>
+                    ! function (d, s, id) {
                         var js, fjs = d.getElementsByTagName(s)[0];
                         if (!d.getElementById(id)) {
                             js = d.createElement(s);
@@ -54,35 +65,43 @@
                             js.src = "//platform.twitter.com/widgets.js";
                             fjs.parentNode.insertBefore(js, fjs);
                         }
-                    }(document, "script", "twitter-wjs");</script>
-                    <!-- Place this tag where you want the +1 button to render. -->
-                    <div class="g-plusone" data-size="medium"></div>
+                    }(document, "script", "twitter-wjs");
+                </script>
+                <!-- Place this tag where you want the +1 button to render. -->
+                <div class="g-plusone" data-size="medium"></div>
 
-                    <!-- Place this tag after the last +1 button tag. -->
-                    <script type="text/javascript">
-                        (function () {
-                            var po = document.createElement('script');
-                            po.type = 'text/javascript';
-                            po.async = true;
-                            po.src = 'https://apis.google.com/js/plusone.js';
-                            var s = document.getElementsByTagName('script')[0];
-                            s.parentNode.insertBefore(po, s);
-                        })();
-                    </script>
+                <!-- Place this tag after the last +1 button tag. -->
+                <script type="text/javascript">
+                    (function () {
+                        var po = document.createElement('script');
+                        po.type = 'text/javascript';
+                        po.async = true;
+                        po.src = 'https://apis.google.com/js/plusone.js';
+                        var s = document.getElementsByTagName('script')[0];
+                        s.parentNode.insertBefore(po, s);
+                    })();
+                </script>
+            </div>
         </div>
-      </div>
     </div>
 
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
-     <script>
-       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
-       ga('create', 'UA-XXXXX-X');
-       ga('send', 'pageview');
+        ga('create', 'UA-XXXXX-X');
+        ga('send', 'pageview');
     </script>
 
     <!-- build:js(.) scripts/oldieshim.js -->
@@ -107,13 +126,15 @@
     <!-- endbower -->
     <!-- endbuild -->
 
-        <!-- build:js({.tmp,app}) scripts/scripts.js -->
-        <script src="scripts/app.js"></script>
-        <script src="scripts/controllers/main.js"></script>
-        <script src="scripts/controllers/about.js"></script>
-		<script src="scripts/controllers/bank.js"></script>
-		<script src="scripts/controllers/category.js"></script>
-		<script src="scripts/controllers/process.js"></script>
-        <!-- endbuild -->
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/main.js"></script>
+    <script src="scripts/controllers/about.js"></script>
+    <script src="scripts/controllers/bank.js"></script>
+    <script src="scripts/controllers/category.js"></script>
+    <script src="scripts/controllers/process.js"></script>
+    <script src="scripts/controllers/login.js"></script>
+    <!-- endbuild -->
 </body>
+
 </html>

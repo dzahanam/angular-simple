@@ -1,0 +1,12 @@
+[
+{"group": "Aktywacja i logowanie","type": "logowanie"},
+{"group": "Informacje","type": "informacje"},
+{"group": "Obsługa kart","type": "karty"},
+{"group": "Transakcje","type": "transakcje"},
+{"group": "Sprzedaż wewnętrznie","type": "wewnetrza"},
+{"group": "Sprzedaż zewnętrzne","type": "zewnetrzna"},
+{"group": "Inwestycje","type": "inwestycje"},
+{"group": "Usługi dodatkowe","type": "dodatkowe"},
+{"group": "Bezpieczeństwo","type": "bezpieczenstwo"},
+{"group": "PFM","type": "pfm"}
+]
