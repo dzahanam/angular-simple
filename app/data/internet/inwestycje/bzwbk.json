@@ -1,0 +1,23 @@
+[
+    {
+        "group": "Inwestycje",
+        "name": "Saldo funduszy inwestycyjnych, produktów ubezpieczeniowo-inwestycyjnych i OFE",
+        "value": "Tak"
+    },
+    {
+        "group": "Inwestycje",
+        "name": "Możliwość dokonywania operacji na funduszy inwestycyjnych",
+        "value": "Tak"
+    },
+    {
+        "group": "Inwestycje",
+        "name": "Saldo rachunku papierów wartościowych Domu Maklerskiego",
+        "value": "Tak"
+    },
+    {
+        "group": "Inwestycje",
+        "name": "Możliwość dokonywania operacji na rachunku papierów wartościowych Domu Maklerskiego",
+        "value": "Tak",
+        "LU": "2014-10-10"
+    }
+]

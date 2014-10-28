@@ -82,28 +82,28 @@
             <tr>
                 <td><a ng-href="#/bank">BZWBK</a>
                 </td>
-                <td ng-repeat="row in bzwbk_globals| filter : feature"><a ng-href="#/category/informacje">{{ row.value }} <span popover="Zmiana od twojej ostatniej wizyty!" popover-trigger="mouseenter" class="badge" ng-show="row.LU">!</span></a>
+                <td ng-repeat="row in bzwbk_globals| filter : feature"><a ng-href="#/category/{{row.link}}">{{ row.value }} <span popover="Zmiana od twojej ostatniej wizyty!" popover-trigger="mouseenter" class="badge" ng-show="row.LU">!</span></a>
                 </td>
             </tr>
             <tr>
                 <td>ING</td>
-                <td ng-repeat="row in ing| filter : feature"><a href="#/category/row={{row.link}}">{{ row.value }} <span popover="Zmiana od twojej ostatniej wizyty!" popover-trigger="mouseenter" class="badge" ng-show="row.LU">!</span></a>
+                <td ng-repeat="row in ing| filter : feature"><a href="#/category/{{row.link}}">{{ row.value }} <span popover="Zmiana od twojej ostatniej wizyty!" popover-trigger="mouseenter" class="badge" ng-show="row.LU">!</span></a>
                 </td>
             </tr>
             <tr>
                 <td>Orange Finanse
                     <br/>(mBank)</td>
-                <td ng-repeat="row in orange| filter : feature"><a href="#">{{ row.value }} <span popover="Zmiana od twojej ostatniej wizyty!" popover-trigger="mouseenter" class="badge" ng-show="row.LU">!</span></a>
+                <td ng-repeat="row in orange| filter : feature"><a href="#/category/{{row.link}}">{{ row.value }} <span popover="Zmiana od twojej ostatniej wizyty!" popover-trigger="mouseenter" class="badge" ng-show="row.LU">!</span></a>
                 </td>
             </tr>
             <tr>
                 <td>Millenium</td>
-                <td ng-repeat="row in millenium| filter : feature"><a href="#">{{ row.value }} <span popover="Zmiana od twojej ostatniej wizyty!" popover-trigger="mouseenter" class="badge" ng-show="row.LU">!</span></a>
+                <td ng-repeat="row in millenium| filter : feature"><a href="#/category/{{row.link}}">{{ row.value }} <span popover="Zmiana od twojej ostatniej wizyty!" popover-trigger="mouseenter" class="badge" ng-show="row.LU">!</span></a>
                 </td>
             </tr>
             <tr>
                 <td>Smartbank</td>
-                <td ng-repeat="row in smart| filter : feature"><a href="#">{{ row.value }} <span popover="Zmiana od twojej ostatniej wizyty!" popover-trigger="mouseenter" class="badge" ng-show="row.LU">!</span></a>
+                <td ng-repeat="row in smart| filter : feature"><a href="#/category/{{row.link}}">{{ row.value }} <span popover="Zmiana od twojej ostatniej wizyty!" popover-trigger="mouseenter" class="badge" ng-show="row.LU">!</span></a>
                 </td>
             </tr>
         </tbody>
@@ -123,3 +123,7 @@
 
 <br/>
 <br/>
+
+<script>
+    $(".nav").show()
+</script>

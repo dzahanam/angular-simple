@@ -1,0 +1,42 @@
+[
+    {
+        "group": "Bezpieczeństwo",
+        "name": "Autoryzacja SMS Kodem",
+        "value": "Tak"
+    },
+    {
+        "group": "Bezpieczeństwo",
+        "name": "Autoryzacja tokenem sprzętowym",
+        "value": "Nie"
+    },
+    {
+        "group": "Bezpieczeństwo",
+        "name": "Autoryzacja tokenem mobilnym",
+        "value": "Nie"
+    },
+    {
+        "group": "Bezpieczeństwo",
+        "name": "Autoryzacja zdrapką",
+        "value": "Nie"
+    },
+    {
+        "group": "Bezpieczeństwo",
+        "name": "Autorazacja via serwis telefoniczny",
+        "value": "Tak"
+    },
+    {
+        "group": "Bezpieczeństwo",
+        "name": "Podpis elektroniczny",
+        "value": "Nie"
+    },
+    {
+        "group": "Bezpieczeństwo",
+        "name": "Blokowanie i odblokowanie kanałów dostępu",
+        "value": "Tak"
+    },
+    {
+        "group": "Bezpieczeństwo",
+        "name": "Ustalenie limitów transakcji (miesięczny, dzienny, jednorazowy)",
+        "value": "Nie"
+    }
+]

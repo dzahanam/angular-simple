@@ -1,0 +1,42 @@
+[
+    {
+        "group": "Dodatkowe",
+        "name": "Poczta wewnętrzna - przychodząca",
+        "value": "Tak"
+    },
+    {
+        "group": "Dodatkowe",
+        "name": "Poczta wewnętrzna - wychodząca",
+        "value": "Tak"
+    },
+    {
+        "group": "Dodatkowe",
+        "name": "Kalendarz",
+        "value": "Tak"
+    },
+    {
+        "group": "Dodatkowe",
+        "name": "Ustanownie pełnomocnictwa online",
+        "value": "Tak"
+    },
+    {
+        "group": "Dodatkowe",
+        "name": "Raport BIK",
+        "value": "Tak"
+    },
+    {
+        "group": "Dodatkowe",
+        "name": "Powiadomienia SMS/e-mail",
+        "value": "Tak"
+    },
+    {
+        "group": "Dodatkowe",
+        "name": "Zmiana nazwy rachunku",
+        "value": "Tak"
+    },
+    {
+        "group": "Dodatkowe",
+        "name": "Przekształcenie rachunku indywidualnego we wspólny",
+        "value": "Tak"
+    }
+]

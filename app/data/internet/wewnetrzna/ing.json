@@ -1,0 +1,42 @@
+[
+    {
+        "group": "Wewnętrzna",
+        "name": "Rachunek osobisty",
+        "value": "Tak"
+    },
+    {
+        "group": "Wewnętrzna",
+        "name": "Kredyt gotówkowy",
+        "value": "Tak"
+    },
+    {
+        "group": "Wewnętrzna",
+        "name": "Karta kredytowa",
+        "value": "Tak"
+    },
+    {
+        "group": "Wewnętrzna",
+        "name": "Zwiększenie limity karty kredytowej",
+        "value": "?"
+    },
+    {
+        "group": "Wewnętrzna",
+        "name": "Limit w koncie",
+        "value": "Tak"
+    },
+    {
+        "group": "Wewnętrzna",
+        "name": "Zwiększenie limitu w koncie",
+        "value": "Tak"
+    },
+    {
+        "group": "Wewnętrzna",
+        "name": "Karta debetowa",
+        "value": "Tak"
+    },
+    {
+        "group": "Wewnętrzna",
+        "name": "Rozłożenie płatności kartą kredytową na raty",
+        "value": "Nie"
+    }
+]

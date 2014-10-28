@@ -1,7 +1,8 @@
 [
     {
         "group": "Aktywacja i logowanie",
-        "value": "93%"
+        "value": "93%",
+        "link": "logowanie"
     },
     {
         "group": "Informacje",
@@ -10,35 +11,43 @@
     },
     {
         "group": "Obsługa kart",
-        "value": "54%"
+        "value": "54%",
+        "link": "karty"
     },
     {
         "group": "Transakcje",
-        "value": "90%"
+        "value": "90%",
+        "link": "transakcje"
     },
     {
         "group": "Sprzedaż wewnętrznie",
         "value": "80%",
+        "link": "wewnetrzna",
         "LU": "2014-10-10"
     },
     {
         "group": "Sprzedaż zewnętrzne",
-        "value": "67%"
+        "value": "67%",
+        "link": "zewnetrzna"
     },
     {
         "group": "Inwestycje",
-        "value": "67%"
+        "value": "67%",
+        "link": "inwestycje"
     },
     {
         "group": "Usługi dodatkowe",
-        "value": "67%"
+        "value": "67%",
+        "link": "dodatkowe"
     },
     {
         "group": "Bezpieczeństwo",
-        "value": "67%"
+        "value": "67%",
+        "link": "bezpieczenstwo"
     },
     {
         "group": "PFM",
-        "value": "67%"
+        "value": "67%",
+        "link": "pfm"
     }
 ]

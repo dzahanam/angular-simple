@@ -1,0 +1,58 @@
+[
+    {
+        "group": "Zewnętrzna",
+        "name": "Rachunek osobisty",
+        "value": "Tak"
+    },
+    {
+        "group": "Zewnętrzna",
+        "name": "Rachunek  firmowy",
+        "value": "Tak"
+    },
+    {
+        "group": "Zewnętrzna",
+        "name": "Kredyt gotówkowy",
+        "value": "Tak"
+    },
+    {
+        "group": "Zewnętrzna",
+        "name": "Karta kredytowa",
+        "value": "Tak",
+        "LU": "2014-10-10"
+    },
+    {
+        "group": "Zewnętrzna",
+        "name": "Zwiększenie limitu karty kredytowej",
+        "value": "Tak"
+    },
+    {
+        "group": "Zewnętrzna",
+        "name": "Limit w koncie",
+        "value": "Tak"
+    },
+    {
+        "group": "Zewnętrzna",
+        "name": "Zwiększenie limitu w koncie",
+        "value": "Tak"
+    },
+    {
+        "group": "Zewnętrzna",
+        "name": "Karta debetowa",
+        "value": "Tak"
+    },
+    {
+        "group": "Zewnętrzna",
+        "name": "Ratio",
+        "value": "Tak"
+    },
+    {
+        "group": "Zewnętrzna",
+        "name": "Konto oszczędnościowe",
+        "value": "Tak"
+    },
+    {
+        "group": "Zewnętrzna",
+        "name": "Lokata",
+        "value": "Tak"
+    }
+]

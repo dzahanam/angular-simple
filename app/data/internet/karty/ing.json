@@ -1,0 +1,62 @@
+[
+    {
+        "group": "Karty",
+        "name": "Portfel elektroniczny - aktywacja",
+        "value": "Tak"
+    },
+    {
+        "group": "Karty",
+        "name": "Nazwa portfela elektronicznego",
+        "value": "V.me"
+    },
+    {
+        "group": "Karty",
+        "name": "Aktywacja karty debetowej",
+        "value": "Tak"
+    },
+    {
+        "group": "Karty",
+        "name": "Informacje dodatkowe",
+        "value": "Nie"
+    },
+    {
+        "group": "Karty",
+        "name": "Nadanie PIN-u do karty debetowej",
+        "value": "Tak"
+    },
+    {
+        "group": "Karty",
+        "name": "Zarządzanie funkcją zbliżeniową",
+        "value": "Nie"
+    },
+    {
+        "group": "Karty",
+        "name": "Funkcjonalność płatności zbliżeniowych - włączenie",
+        "value": "Nie"
+    },
+    {
+        "group": "Karty",
+        "name": "Funkcjonalność płatności zbliżeniowych - wyłączenie",
+        "value": "Nie"
+    },
+    {
+        "group": "Karty",
+        "name": "Zmiana wizerunku karty debetowej",
+        "value": "Nie"
+    },
+    {
+        "group": "Karty",
+        "name": "Zarządzanie limitami karty debetowej",
+        "value": "Tak"
+    },
+    {
+        "group": "Karty",
+        "name": "Zamówienie duplikatu karty debetowej",
+        "value": "Nie"
+    },
+    {
+        "group": "Karty",
+        "name": "Zastrzeżenie karty",
+        "value": "Tak"
+    }
+]
