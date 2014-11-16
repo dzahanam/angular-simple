@@ -28,6 +28,10 @@ angular
                 templateUrl: 'views/main.html',
                 controller: 'MainCtrl'
             })
+            .when('/main2', {
+                templateUrl: 'views/main2.html',
+                controller: 'MainCtrl'
+            })
             .when('/about', {
                 templateUrl: 'views/about.html',
                 controller: 'AboutCtrl'

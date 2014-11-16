@@ -3,7 +3,7 @@
     </li>
     <li><a href="#">TOP 5 Banków</a>
     </li>
-    <li class="active">klienci indywidualni - internet</li>
+    <li class="active">klienci indywidualnii - widok alternatywny</li>
 </ol>
 
 <!--div class="row well">
@@ -19,7 +19,7 @@
 </div-->
 
 <tabset>
-    <tab heading="Market News">
+    <tab heading="PR News">
         <span ng-repeat="item in feeds" ng-animate="'animate'">
                <span class="glyphicon glyphicon-edit"></span>
         <a class="small" ng-click="isCollapsed = !isCollapsed" target="_blank">{{item.title}}</a>
@@ -31,19 +31,7 @@
         </br>
         </span>
     </tab>
-    <tab heading="Obserwatorium News">
-        <span ng-repeat="item in feeds" ng-animate="'animate'">
-               <span class="glyphicon glyphicon-edit"></span>
-        <a class="small" ng-click="isCollapsed = !isCollapsed" target="_blank">{{item.title}}</a>
-        </br>
-        <div collapse="!isCollapsed">
-            <p>{{item.contentSnippet}} <a href="{{item.link}}">źródło: PR News</a>
-                <p>
-        </div>
-        </br>
-        </span>
-    </tab>
-    <tab heading="Twoja historia">
+    <tab heading="Twój log">
         <span ng-repeat="item in feeds" ng-animate="'animate'">
                <span class="glyphicon glyphicon-edit"></span>
         <a class="small" ng-click="isCollapsed = !isCollapsed" target="_blank">{{item.title}}</a>
@@ -58,17 +46,6 @@
 </tabset>
 
 <div class="row well">
-    <div class="btn-group" dropdown is-open="kanal.isopen">
-        <button type="button" class="btn btn-primary dropdown-toggle" ng-disabled="disabled">
-            Wybór kanału <span class="caret"></span>
-        </button>
-        <ul class="dropdown-menu" role="menu">
-            <li><a href="#">internet</a>
-            </li>
-            <li><a href="#">mobile</a>
-            </li>
-        </ul>
-    </div>
     <div class="btn-group" dropdown is-open="segment.isopen">
         <button type="button" class="btn btn-primary dropdown-toggle" ng-disabled="disabled">
             Wybór segmentu <span class="caret"></span>
@@ -92,41 +69,39 @@
     <table class="table table-striped">
         <thead>
             <tr>
-                <th>Charakterystyka</th>
-                <th ng-repeat="feature in bzwbk_globals| filter : feature">
-                    {{ feature.group }}
-                    <button type="button" class="btn btn-primary" ng-model="singleModel" btn-checkbox btn-checkbox-true="1" btn-checkbox-false="0">
-                        Raport
-                    </button>
-                </th>
+                <th>Cecha</th>
+                <th>BZWBK</th>
+                <th>ING</th>
+                <th>ORANGE</th>
+                <th>Meritum</th>
+                <th>?</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td><a ng-href="#/bank">BZWBK</a>
+                <td><a ng-href="#/bank">Aktywacja i logowanie</a>
                 </td>
-                <td ng-repeat="row in bzwbk_globals| filter : feature"><a ng-href="#/category/{{row.link}}">{{ row.value }} <span popover="Zmiana od twojej ostatniej wizyty!" popover-trigger="mouseenter" class="badge" ng-show="row.LU">!</span></a>
-                </td>
-            </tr>
-            <tr>
-                <td>ING</td>
-                <td ng-repeat="row in ing| filter : feature"><a href="#/category/{{row.link}}">{{ row.value }} <span popover="Zmiana od twojej ostatniej wizyty!" popover-trigger="mouseenter" class="badge" ng-show="row.LU">!</span></a>
+                <td ng-repeat="row in banks| filter : feature"><a ng-href="#/category/{{row.link}}">{{ row.value }} <span popover="Zmiana od twojej ostatniej wizyty!" popover-trigger="mouseenter" class="badge" ng-show="row.LU">!</span></a>
                 </td>
             </tr>
             <tr>
-                <td>Orange Finanse
-                    <br/>(mBank)</td>
-                <td ng-repeat="row in orange| filter : feature"><a href="#/category/{{row.link}}">{{ row.value }} <span popover="Zmiana od twojej ostatniej wizyty!" popover-trigger="mouseenter" class="badge" ng-show="row.LU">!</span></a>
+                <td>Informacje</td>
+                <td ng-repeat="row in banks| filter : feature"><a href="#/category/{{row.link}}">{{ row.value }} <span popover="Zmiana od twojej ostatniej wizyty!" popover-trigger="mouseenter" class="badge" ng-show="row.LU">!</span></a>
                 </td>
             </tr>
             <tr>
-                <td>Millenium</td>
-                <td ng-repeat="row in millenium| filter : feature"><a href="#/category/{{row.link}}">{{ row.value }} <span popover="Zmiana od twojej ostatniej wizyty!" popover-trigger="mouseenter" class="badge" ng-show="row.LU">!</span></a>
+                <td>Transakcje</td>
+                <td ng-repeat="row in banks| filter : feature"><a href="#/category/{{row.link}}">{{ row.value }} <span popover="Zmiana od twojej ostatniej wizyty!" popover-trigger="mouseenter" class="badge" ng-show="row.LU">!</span></a>
                 </td>
             </tr>
             <tr>
-                <td>Smartbank</td>
-                <td ng-repeat="row in smart| filter : feature"><a href="#/category/{{row.link}}">{{ row.value }} <span popover="Zmiana od twojej ostatniej wizyty!" popover-trigger="mouseenter" class="badge" ng-show="row.LU">!</span></a>
+                <td>Sprzedaż wewnętrznie</td>
+                <td ng-repeat="row in banks| filter : feature"><a href="#/category/{{row.link}}">{{ row.value }} <span popover="Zmiana od twojej ostatniej wizyty!" popover-trigger="mouseenter" class="badge" ng-show="row.LU">!</span></a>
+                </td>
+            </tr>
+            <tr>
+                <td>Sprzedaż zewnętrzne</td>
+                <td ng-repeat="row in banks| filter : feature"><a href="#/category/{{row.link}}">{{ row.value }} <span popover="Zmiana od twojej ostatniej wizyty!" popover-trigger="mouseenter" class="badge" ng-show="row.LU">!</span></a>
                 </td>
             </tr>
         </tbody>
