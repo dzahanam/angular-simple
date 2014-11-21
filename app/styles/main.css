@@ -19,6 +19,9 @@ body {
 }
 /* Make the masthead heading the same height as the navigation */
 
+.navbar-brand {
+    height: 100px;
+}
 .header h3 {
     margin-top: 0;
     margin-bottom: 0;
