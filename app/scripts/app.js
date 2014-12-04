@@ -30,7 +30,11 @@ angular
             })
             .when('/main2', {
                 templateUrl: 'views/main2.html',
-                controller: 'MainCtrl'
+                controller: 'Main2Ctrl'
+            })
+            .when('/mobile', {
+                templateUrl: 'views/mobile.html',
+                controller: 'MobileCtrl'
             })
             .when('/about', {
                 templateUrl: 'views/about.html',

@@ -91,6 +91,9 @@ body {
 .logout {
     color: red;
 }
+.contrast {
+    color: black;
+}
 .selected img {
     opacity: 0.5;
 }

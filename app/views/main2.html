@@ -1,7 +1,7 @@
 <ol class="breadcrumb">
     <li><a href="#">Analizy</a>
     </li>
-    <li><a href="#">TOP 5 Banków</a>
+    <li><a href="#">TOP 4 Banków</a>
     </li>
     <li class="active">klienci indywidualnii - widok alternatywny</li>
 </ol>
@@ -18,6 +18,7 @@
            </span>
 </div-->
 
+<!--
 <tabset>
     <tab heading="PR News">
         <span ng-repeat="item in feeds" ng-animate="'animate'">
@@ -44,6 +45,7 @@
         </span>
     </tab>
 </tabset>
+-->
 
 <div class="row well">
     <div class="btn-group" dropdown is-open="segment.isopen">
@@ -70,39 +72,71 @@
         <thead>
             <tr>
                 <th>Cecha</th>
-                <th>BZWBK</th>
-                <th>ING</th>
-                <th>ORANGE</th>
-                <th>Meritum</th>
-                <th>?</th>
+                <th><a href="" ng-click="predicate = 'bank1'; reverse=!reverse">BZWBK</a>
+                </th>
+                <th><a href="" ng-click="predicate = 'bank2'; reverse=!reverse">ING</a>
+                </th>
+                <th><a href="" ng-click="predicate = 'bank3'; reverse=!reverse">ORANGE</a>
+                </th>
+                <th><a href="" ng-click="predicate = 'bank4'; reverse=!reverse">Meritum</a>
+                </th>
             </tr>
         </thead>
         <tbody>
+            <!--
             <tr>
                 <td><a ng-href="#/bank">Aktywacja i logowanie</a>
                 </td>
-                <td ng-repeat="row in banks| filter : feature"><a ng-href="#/category/{{row.link}}">{{ row.value }} <span popover="Zmiana od twojej ostatniej wizyty!" popover-trigger="mouseenter" class="badge" ng-show="row.LU">!</span></a>
+                <td ng-repeat="row in logowanie| orderBy:predicate:reverse"><a ng-href="#/category/{{row.link}}">{{ row.value }} <span popover="Zmiana od twojej ostatniej wizyty!" popover-trigger="mouseenter" class="badge" ng-show="row.LU">!</span></a>
                 </td>
             </tr>
             <tr>
                 <td>Informacje</td>
-                <td ng-repeat="row in banks| filter : feature"><a href="#/category/{{row.link}}">{{ row.value }} <span popover="Zmiana od twojej ostatniej wizyty!" popover-trigger="mouseenter" class="badge" ng-show="row.LU">!</span></a>
+                <td ng-repeat="row in informacje | filter : feature"><a href="#/category/{{row.link}}">{{ row.value }} <span popover="Zmiana od twojej ostatniej wizyty!" popover-trigger="mouseenter" class="badge" ng-show="row.LU">!</span></a>
                 </td>
             </tr>
             <tr>
                 <td>Transakcje</td>
-                <td ng-repeat="row in banks| filter : feature"><a href="#/category/{{row.link}}">{{ row.value }} <span popover="Zmiana od twojej ostatniej wizyty!" popover-trigger="mouseenter" class="badge" ng-show="row.LU">!</span></a>
+                <td ng-repeat="row in transakcje| filter : feature"><a href="#/category/{{row.link}}">{{ row.value }} <span popover="Zmiana od twojej ostatniej wizyty!" popover-trigger="mouseenter" class="badge" ng-show="row.LU">!</span></a>
                 </td>
             </tr>
             <tr>
-                <td>Sprzedaż wewnętrznie</td>
-                <td ng-repeat="row in banks| filter : feature"><a href="#/category/{{row.link}}">{{ row.value }} <span popover="Zmiana od twojej ostatniej wizyty!" popover-trigger="mouseenter" class="badge" ng-show="row.LU">!</span></a>
+                <td>Sprzedaż wewnętrzna</td>
+                <td ng-repeat="row in wewnetrzna| filter : feature"><a href="#/category/{{row.link}}">{{ row.value }} <span popover="Zmiana od twojej ostatniej wizyty!" popover-trigger="mouseenter" class="badge" ng-show="row.LU">!</span></a>
                 </td>
             </tr>
             <tr>
                 <td>Sprzedaż zewnętrzne</td>
-                <td ng-repeat="row in banks| filter : feature"><a href="#/category/{{row.link}}">{{ row.value }} <span popover="Zmiana od twojej ostatniej wizyty!" popover-trigger="mouseenter" class="badge" ng-show="row.LU">!</span></a>
+                <td ng-repeat="row in zewnetrzna| filter : feature"><a href="#/category/{{row.link}}">{{ row.value }} <span popover="Zmiana od twojej ostatniej wizyty!" popover-trigger="mouseenter" class="badge" ng-show="row.LU">!</span></a>
                 </td>
+            </tr>
+            <tr>
+                <td>Inwestycje</td>
+                <td ng-repeat="row in zewnetrzna| filter : feature"><a href="#/category/{{row.link}}">{{ row.value }} <span popover="Zmiana od twojej ostatniej wizyty!" popover-trigger="mouseenter" class="badge" ng-show="row.LU">!</span></a>
+                </td>
+            </tr>
+            <tr>
+                <td>Usługi dodatkowe</td>
+                <td ng-repeat="row in zewnetrzna| filter : feature"><a href="#/category/{{row.link}}">{{ row.value }} <span popover="Zmiana od twojej ostatniej wizyty!" popover-trigger="mouseenter" class="badge" ng-show="row.LU">!</span></a>
+                </td>
+            </tr>
+            <tr>
+                <td>Bezpieczeństwo</td>
+                <td ng-repeat="row in zewnetrzna| filter : feature"><a href="#/category/{{row.link}}">{{ row.value }} <span popover="Zmiana od twojej ostatniej wizyty!" popover-trigger="mouseenter" class="badge" ng-show="row.LU">!</span></a>
+                </td>
+            </tr>
+            <tr>
+                <td>PFM</td>
+                <td ng-repeat="row in zewnetrzna| filter : feature"><a href="#/category/{{row.link}}">{{ row.value }} <span popover="Zmiana od twojej ostatniej wizyty!" popover-trigger="mouseenter" class="badge" ng-show="row.LU">!</span></a>
+                </td>
+            </tr>
+-->
+            <tr ng-repeat="feature in features | orderBy:predicate:reverse">
+                <td>{{feature.name}}</td>
+                <td>{{feature.bank1}}</td>
+                <td>{{feature.bank2}}</td>
+                <td>{{feature.bank3}}</td>
+                <td>{{feature.bank4}}</td>
             </tr>
         </tbody>
     </table>

@@ -17,7 +17,7 @@
     <!-- endbuild -->
 </head>
 
-<body ng-app="angularSimpleApp">
+<body ng-app="angularSimpleApp" class="container">
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -45,9 +45,9 @@
                     <li class="dropdown active">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Analizy <span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
-                            <li><a href="#">Internet</a>
+                            <li><a href="#/main">Internet</a>
                             </li>
-                            <li><a href="#">Mobile</a>
+                            <li><a href="#/mobile">Mobile</a>
                             </li>
                             <li><a href="#">Instytucja</a>
                             </li>
@@ -123,7 +123,7 @@
             </ul>
         </div-->
 
-    <div ng-view=""></div>
+    <div ng-view="" class=""></div>
 
     <div class="navbar navbar-top">
         <p>Follow US</p>
@@ -208,6 +208,8 @@
     <!-- build:js({.tmp,app}) scripts/scripts.js -->
     <script src="scripts/app.js"></script>
     <script src="scripts/controllers/main.js"></script>
+    <script src="scripts/controllers/main2.js"></script>
+    <script src="scripts/controllers/mobile.js"></script>
     <script src="scripts/controllers/about.js"></script>
     <script src="scripts/controllers/bank.js"></script>
     <script src="scripts/controllers/category.js"></script>
