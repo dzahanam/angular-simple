@@ -1,7 +1,9 @@
 <ol class="breadcrumb">
-    <li><a href="#">Strona startowa</a>
+    <li><a href="#">Analizy</a>
     </li>
-
+    <li><a href="#">TOP 5 Banków</a>
+    </li>
+    <li class="active">klienci indywidualni - mobile</li>
 </ol>
 
 <!--div class="row well">
@@ -55,7 +57,6 @@
     </tab>
 </tabset>
 
-<!--
 <div class="row well">
     <div class="btn-group" dropdown is-open="kanal.isopen">
         <button type="button" class="btn btn-primary dropdown-toggle" ng-disabled="disabled">
@@ -87,16 +88,16 @@
     <button type="button" class="btn btn-primary dropdown-toggle" ng-click="feature=null">Wyczyść</button>
 </div>
 
-<div class="row well table-responsive">
+<div class="row well">
     <table class="table table-striped">
         <thead>
             <tr>
                 <th>Charakterystyka</th>
                 <th ng-repeat="feature in bzwbk_globals| filter : feature">
                     {{ feature.group }}
-                    button type="button" class="btn btn-primary" ng-model="singleModel" btn-checkbox btn-checkbox-true="1" btn-checkbox-false="0">
+                    <!--button type="button" class="btn btn-primary" ng-model="singleModel" btn-checkbox btn-checkbox-true="1" btn-checkbox-false="0">
                         Raport
-                    </button
+                    </button-->
                     <small>Raport</small>
                 </th>
             </tr>
@@ -141,35 +142,6 @@
             <li><a href="#">XLS <span class="glyphicon glyphicon-save"></span></a>
             </li>
         </ul>
-    </div>
-</div>
--->
-<div class="container">
-    <div class="row">
-        <div class="col-xs-6 col-md-3">
-            <a href="#" class="thumbnail" style="background:cyan">
-                <center class="caption">Internet</center>
-                <img data-src="holder.js/100%x180" alt="..." src="images/icons/calculator73.png">
-            </a>
-        </div>
-        <div class="col-xs-6 col-md-3">
-            <a href="#" class="thumbnail" style="background:yellow">
-                <center class="caption">Mobile</center>
-                <img data-src="holder.js/100%x180" alt="..." src="images/icons/dollarsign2.png">
-            </a>
-        </div>
-        <div class="col-xs-6 col-md-3">
-            <a href="#" class="thumbnail" style="background:pink">
-                <center class="caption">Strefy samoobsługowe</center>
-                <img data-src="holder.js/100%x180" alt="Strefy samoobsługowe" src="images/icons/office37.png">
-            </a>
-        </div>
-        <div class="col-xs-6 col-md-3">
-            <a href="#" class="thumbnail" style="background:orange">
-                <center class="caption">Płatności</center>
-                <img data-src="holder.js/100%x180" alt="Płatności" src="images/icons/moneybag.png">
-            </a>
-        </div>
     </div>
 </div>
 

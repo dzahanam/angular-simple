@@ -10,8 +10,8 @@
 angular.module('angularSimpleApp')
     .controller('LoginCtrl', function ($scope, $http) {
         $scope.credentials = {
-            username: 'Username',
-            password: 'Password'
+            username: '',
+            password: ''
         };
 
 

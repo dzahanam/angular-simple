@@ -54,8 +54,12 @@ body {
 .jumbotron {
     text-align: center;
     border-bottom: 1px solid #e5e5e5;
-    background-image: url(../images/city_new_york_nyc.jpg);
     color: white;
+}
+.image {
+    background-image: url(../images/city_new_york_nyc.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
 }
 .jumbotron .btn {
     font-size: 21px;
