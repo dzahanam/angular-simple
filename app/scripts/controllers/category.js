@@ -32,4 +32,6 @@ angular.module('angularSimpleApp')
             $scope.millenium = data2;
         });
 
+        $scope.category = $routeParams.type;
+
     });

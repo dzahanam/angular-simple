@@ -1,11 +1,39 @@
-<ol class="breadcrumb">
-    <li><a href="#">Analizy</a>
-    </li>
-    <li><a href="#">TOP 4 Banków</a>
-    </li>
-    <li class="active">klienci indywidualnii - widok alternatywny</li>
-</ol>
+<div class="row well">
 
+    <ol class="breadcrumb">
+        <li><a href="#">Analizy</a>
+        </li>
+        <li><a href="#">TOP 4 Banków</a>
+        </li>
+        <li class="active">klienci indywidualnii - internet</li>
+    </ol>
+
+    <div class="btn-group" dropdown is-open="kanal.isopen">
+        <button type="button" class="btn btn-primary dropdown-toggle" ng-disabled="disabled">
+            Wybór kanału <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" role="menu">
+            <li class="active"><a href="#/main2">Internet</a>
+            </li>
+            <li><a href="#/mobile">Mobile</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="btn-group" dropdown is-open="segment.isopen">
+        <button type="button" class="btn btn-primary dropdown-toggle" ng-disabled="disabled">
+            Wybór segmentu <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" role="menu">
+            <li><a href="#">klient indywidualny</a>
+            </li>
+            <li><a href="#">SME</a>
+            </li>
+            <li><a href="#">CORPO</a>
+            </li>
+        </ul>
+    </div>
+</div>
 <!--div class="row well">
            <span ng-repeat="item in feeds" ng-animate="'animate'">
                <span class="glyphicon glyphicon-edit"></span>
@@ -48,30 +76,19 @@
 -->
 
 <div class="row well">
-    <div class="btn-group" dropdown is-open="segment.isopen">
-        <button type="button" class="btn btn-primary dropdown-toggle" ng-disabled="disabled">
-            Wybór segmentu <span class="caret"></span>
-        </button>
-        <ul class="dropdown-menu" role="menu">
-            <li><a href="#">klient indywidualny</a>
-            </li>
-            <li><a href="#">SME</a>
-            </li>
-            <li><a href="#">CORPO</a>
-            </li>
-        </ul>
-    </div>
     Wyszukaj:
     <input ng-model="feature" value="Search">
+    <!--
     <select class="btn btn-primary dropdown-toggle" ng-model="feature" ng-options="feature.group for feature in bzwbk_globals" value="Kategoria"></select>
-    <button type="button" class="btn btn-primary dropdown-toggle" ng-click="feature=null">Wyczyść</button>
+<button type="button" class="btn btn-primary dropdown-toggle" ng-click="feature=null">Wyczyść</button>
+-->
 </div>
 
 <div class="row well">
     <table class="table table-striped">
         <thead>
             <tr>
-                <th>Cecha</th>
+                <th>Funkcjonalność</th>
                 <th><a href="" ng-click="predicate = 'bank1'; reverse=!reverse">BZWBK</a>
                 </th>
                 <th><a href="" ng-click="predicate = 'bank2'; reverse=!reverse">ING</a>
@@ -131,8 +148,9 @@
                 </td>
             </tr>
 -->
-            <tr ng-repeat="feature in features | orderBy:predicate:reverse">
-                <td>{{feature.name}}</td>
+            <tr ng-repeat="feature in features | filter:feature | orderBy:predicate:reverse">
+                <td><a href="#/category/{{feature.name}}">{{feature.name}}</a>
+                </td>
                 <td>{{feature.bank1}}</td>
                 <td>{{feature.bank2}}</td>
                 <td>{{feature.bank3}}</td>

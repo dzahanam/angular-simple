@@ -1,61 +1,75 @@
 <ol class="breadcrumb">
-  <li><a href="#">Analizy</a></li>
-  <li><a href="#">TOP 5 Banków - klienci indywidualnii</a></li>
-  <li class="active">Widok kategorii</li>
+    <li><a href="#">Analizy</a>
+    </li>
+    <li><a href="#">TOP 5 Banków - klienci indywidualnii</a>
+    </li>
+    <li class="active">Widok kategorii - {{category}}</li>
 </ol>
 
 
-<div class="row well">  
-   Wyszukaj:<input ng-model="feature" value="Search">
-   <select class="btn btn-primary dropdown-toggle" ng-model="feature" ng-options="feature.name for feature in bzwbk" value="Funkcjonalność"></select>
-   <button type="button" class="btn btn-primary dropdown-toggle" ng-click="feature=null">Wyczyść</button>
+<div class="row well">
+    Wyszukaj:
+    <input ng-model="feature" value="Search">
+    <select class="btn btn-primary dropdown-toggle" ng-model="feature" ng-options="feature.name for feature in bzwbk" value="Funkcjonalność"></select>
+    <button type="button" class="btn btn-primary dropdown-toggle" ng-click="feature=null">Wyczyść</button>
 </div>
 
 <div class="row well">
- <table id="table-desc" class="table table-striped table-desc">
-  <thead><tr>
-    <th>BANK</th>
-    <th ng-repeat="row in bzwbk| filter:feature">{{ row.name }}</th>
-  </tr></thead>
-  <tbody>
-	  <tr>
-		<td>BZWBK</td>
-		<td ng-repeat="row in bzwbk| filter:feature"><a ng-href="#/process">{{ row.value }} <span popover="Dodano nowe pole!" popover-trigger="mouseenter" class="badge" ng-show="row.LU">!</span></a></td>
-	  </tr>
-	  <tr>
-		<td>ING</td>
-		<td ng-repeat="row in ing| filter : feature"><a ng-href="#/process">{{ row.value }} <span popover="Dodano nowe pole!" popover-trigger="mouseenter" class="badge" ng-show="row.LU">!</span></a></td>
-	  </tr>
-	  <tr>
-		<td>Orange Finanse<br/> (mBank)</td>
-		<td ng-repeat="row in orange| filter : feature"><a ng-href="#/process">{{ row.value }} <span popover="Dodano nowe pole!" popover-trigger="mouseenter" class="badge" ng-show="row.LU">!</span></a></td>
-	  </tr>
-	  <tr>
-		<td>Millenium</td>
-		<td ng-repeat="row in millenium| filter : feature"><a ng-href="#/process">{{ row.value }} <span popover="Dodano nowe pole!" popover-trigger="mouseenter" class="badge" ng-show="row.LU">!</span></a></td>
-	  </tr>
-	  <tr>
-		<td>Smartbank</td>
-		<td ng-repeat="row in smart| filter : feature"><a ng-href="#/process">{{ row.value }} <span popover="Dodano nowe pole!" popover-trigger="mouseenter" class="badge" ng-show="row.LU">!</span></a></td>
-	  </tr>
-  </tbody>
- </table>
- <div class="btn-group" dropdown is-open="status2.isopen">
-      <button type="button2" class="btn btn-primary dropdown-toggle" ng-disabled="disabled">
-        Eksport <span class="caret"></span>
-      </button>
-      <ul class="dropdown-menu" role="menu">
-        <li><a href="#">PDF <span class="glyphicon glyphicon-save"></span></a></li>
-        <li><a href="#">XLS <span class="glyphicon glyphicon-save"></span></a></li>
-      </ul>
- </div>
+    <table id="table-desc" class="table table-striped table-desc">
+        <thead>
+            <tr>
+                <th>BANK</th>
+                <th ng-repeat="row in bzwbk| filter:feature">{{ row.name }}</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>BZWBK</td>
+                <td ng-repeat="row in bzwbk| filter:feature"><a ng-href="#/process">{{ row.value }} <span popover="Dodano nowe pole!" popover-trigger="mouseenter" class="badge" ng-show="row.LU">!</span></a>
+                </td>
+            </tr>
+            <tr>
+                <td>ING</td>
+                <td ng-repeat="row in ing| filter : feature"><a ng-href="#/process">{{ row.value }} <span popover="Dodano nowe pole!" popover-trigger="mouseenter" class="badge" ng-show="row.LU">!</span></a>
+                </td>
+            </tr>
+            <tr>
+                <td>Orange Finanse
+                    <br/>(mBank)</td>
+                <td ng-repeat="row in orange| filter : feature"><a ng-href="#/process">{{ row.value }} <span popover="Dodano nowe pole!" popover-trigger="mouseenter" class="badge" ng-show="row.LU">!</span></a>
+                </td>
+            </tr>
+            <tr>
+                <td>Millenium</td>
+                <td ng-repeat="row in millenium| filter : feature"><a ng-href="#/process">{{ row.value }} <span popover="Dodano nowe pole!" popover-trigger="mouseenter" class="badge" ng-show="row.LU">!</span></a>
+                </td>
+            </tr>
+            <tr>
+                <td>Smartbank</td>
+                <td ng-repeat="row in smart| filter : feature"><a ng-href="#/process">{{ row.value }} <span popover="Dodano nowe pole!" popover-trigger="mouseenter" class="badge" ng-show="row.LU">!</span></a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="btn-group" dropdown is-open="status2.isopen">
+        <button type="button2" class="btn btn-primary dropdown-toggle" ng-disabled="disabled">
+            Eksport <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" role="menu">
+            <li><a href="#">PDF <span class="glyphicon glyphicon-save"></span></a>
+            </li>
+            <li><a href="#">XLS <span class="glyphicon glyphicon-save"></span></a>
+            </li>
+        </ul>
+    </div>
 </div>
-<br/><br/>
+<br/>
+<br/>
 
 <div class="row jumbotron">
- wykresy
+    wykresy
 </div>
 
 <div class="row jumbotron">
- podsumowanie
+    podsumowanie
 </div>

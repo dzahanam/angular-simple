@@ -17,6 +17,6 @@ angular.module('angularSimpleApp')
 
         $scope.login = function (credentials) {
             return $http
-                .post('/login', credentials);
+                .post('/#/main');
         };
     });

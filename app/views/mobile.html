@@ -1,10 +1,38 @@
-<ol class="breadcrumb">
-    <li><a href="#">Analizy</a>
-    </li>
-    <li><a href="#">TOP 5 Banków</a>
-    </li>
-    <li class="active">klienci indywidualni - mobile</li>
-</ol>
+<div class="row well">
+
+    <ol class="breadcrumb">
+        <li><a href="#">Analizy</a>
+        </li>
+        <li><a href="#">TOP 4 Banków</a>
+        </li>
+        <li class="active">klienci indywidualni - mobile</li>
+    </ol>
+    <div class="btn-group" dropdown is-open="kanal.isopen">
+        <button type="button" class="btn btn-primary dropdown-toggle" ng-disabled="disabled">
+            Wybór kanału <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" role="menu">
+            <li><a href="#/main2">Internet</a>
+            </li>
+            <li><a href="#/mobile">Mobile</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="btn-group" dropdown is-open="segment.isopen">
+        <button type="button" class="btn btn-primary dropdown-toggle" ng-disabled="disabled">
+            Wybór segmentu <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" role="menu">
+            <li><a href="#">klient indywidualny</a>
+            </li>
+            <li><a href="#">SME</a>
+            </li>
+            <li><a href="#">CORPO</a>
+            </li>
+        </ul>
+    </div>
+</div>
 
 <!--div class="row well">
            <span ng-repeat="item in feeds" ng-animate="'animate'">
@@ -21,7 +49,7 @@
 <tabset>
     <tab heading="Market News">
         <span ng-repeat="item in feeds" ng-animate="'animate'">
-               <span class="glyphicon glyphicon-edit"></span>
+        <span class="glyphicon glyphicon-edit"></span>
         <a class="small" ng-click="isCollapsed = !isCollapsed" target="_blank">{{item.title}}</a>
         </br>
         <div collapse="!isCollapsed">
@@ -32,7 +60,7 @@
         </span>
     </tab>
     <tab heading="Obserwatorium News">
-        <span ng-repeat="item in feeds" ng-animate="'animate'">
+        <span ng-repeat="item in feeds2" ng-animate="'animate'">
                <span class="glyphicon glyphicon-edit"></span>
         <a class="small" ng-click="isCollapsed = !isCollapsed" target="_blank">{{item.title}}</a>
         </br>
@@ -44,7 +72,7 @@
         </span>
     </tab>
     <tab heading="Twoja historia">
-        <span ng-repeat="item in feeds" ng-animate="'animate'">
+        <span ng-repeat="item in feeds3" ng-animate="'animate'">
                <span class="glyphicon glyphicon-edit"></span>
         <a class="small" ng-click="isCollapsed = !isCollapsed" target="_blank">{{item.title}}</a>
         </br>
@@ -58,34 +86,12 @@
 </tabset>
 
 <div class="row well">
-    <div class="btn-group" dropdown is-open="kanal.isopen">
-        <button type="button" class="btn btn-primary dropdown-toggle" ng-disabled="disabled">
-            Wybór kanału <span class="caret"></span>
-        </button>
-        <ul class="dropdown-menu" role="menu">
-            <li><a href="#">internet</a>
-            </li>
-            <li><a href="#">mobile</a>
-            </li>
-        </ul>
-    </div>
-    <div class="btn-group" dropdown is-open="segment.isopen">
-        <button type="button" class="btn btn-primary dropdown-toggle" ng-disabled="disabled">
-            Wybór segmentu <span class="caret"></span>
-        </button>
-        <ul class="dropdown-menu" role="menu">
-            <li><a href="#">klient indywidualny</a>
-            </li>
-            <li><a href="#">SME</a>
-            </li>
-            <li><a href="#">CORPO</a>
-            </li>
-        </ul>
-    </div>
     Wyszukaj:
     <input ng-model="feature" value="Search">
+<!--
     <select class="btn btn-primary dropdown-toggle" ng-model="feature" ng-options="feature.group for feature in bzwbk_globals" value="Kategoria"></select>
-    <button type="button" class="btn btn-primary dropdown-toggle" ng-click="feature=null">Wyczyść</button>
+<button type="button" class="btn btn-primary dropdown-toggle" ng-click="feature=null">Wyczyść</button>
+-->
 </div>
 
 <div class="row well">
@@ -98,7 +104,7 @@
                     <!--button type="button" class="btn btn-primary" ng-model="singleModel" btn-checkbox btn-checkbox-true="1" btn-checkbox-false="0">
                         Raport
                     </button-->
-                    <small>Raport</small>
+<!--                    <small>Raport</small>-->
                 </th>
             </tr>
         </thead>
