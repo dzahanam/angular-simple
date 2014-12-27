@@ -16,6 +16,7 @@
            </span>
 </div-->
 
+<!--
 <tabset>
     <tab heading="Market News">
         <span ng-repeat="item in feeds" ng-animate="'animate'">
@@ -54,6 +55,69 @@
         </span>
     </tab>
 </tabset>
+-->
+
+<div class="btn-group" dropdown is-open="marketing.isopen">
+    <button type="button" class="btn btn-primary dropdown-toggle" ng-disabled="disabled">
+        Market News <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu" role="menu">
+        <li class="active"><a href="">Włącz</a>
+        </li>
+        <li><a href="">Wyłącz</a>
+        </li>
+    </ul>
+</div>
+<div class="btn-group" dropdown is-open="history.isopen">
+    <button type="button" class="btn btn-primary dropdown-toggle" ng-disabled="disabled">
+        Twoja historia <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu" role="menu">
+        <li class="active"><a href="">Włącz</a>
+        </li>
+        <li><a href="">Wyłącz</a>
+        </li>
+    </ul>
+</div>
+<div class="btn-group" dropdown is-open="observatory.isopen">
+    <button type="button" class="btn btn-primary dropdown-toggle" ng-disabled="disabled">
+        Obserwatorium News <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu" role="menu">
+        <li class="active"><a href="">Włącz</a>
+        </li>
+        <li><a href="">Wyłącz</a>
+        </li>
+    </ul>
+</div>
+
+<ul class="list-group">
+    <li class="list-group-item list-group-item-success" ng-repeat="item in feeds">
+        <a class="small" ng-click="isCollapsed = !isCollapsed" target="_blank">{{item.title}}</a>
+        <br>
+        <div collapse="!isCollapsed">
+            <p>{{item.contentSnippet}} <a href="{{item.link}}">źródło: PR News</a>
+                <p>
+        </div>
+    </li>
+    <li class="list-group-item list-group-item-info" ng-repeat="item in feeds2">
+        <a class="small" ng-click="isCollapsed = !isCollapsed" target="_blank">{{item.title}}</a>
+        <br>
+        <div collapse="!isCollapsed">
+            <p>{{item.contentSnippet}} <a href="{{item.link}}">Więcej</a>
+                <p>
+        </div>
+    </li>   
+    <li class="list-group-item list-group-item-warning" ng-repeat="item in feeds3">
+        <a class="small" ng-click="isCollapsed = !isCollapsed" target="_blank">{{item.title}}</a>
+        <br>
+        <div collapse="!isCollapsed">
+            <p>{{item.contentSnippet}} <a href="{{item.link}}">źródło: PR News</a>
+                <p>
+        </div>
+    </li>
+    <!--    <li class="list-group-item list-group-item-danger">Vestibulum at eros</li>-->
+</ul>
 
 <!--
 <div class="row well">
@@ -147,53 +211,41 @@
 <div class="container">
     <div class="row">
         <div class="col-xs-6 col-md-3">
-            <a href="#/main2" class="thumbnail" style="background:cyan">
+            <a href="#/main2" class="thumbnail" style="background:#FF9317">
                 <center class="caption">Internet</center>
-                <img data-src="holder.js/100%x180" alt="..." src="images/icons/calculator73.png">
+                <img data-src="holder.js/400x350" alt="..." src="images/icons/calculator73.png">
             </a>
         </div>
         <div class="col-xs-6 col-md-3">
-            <a href="#/mobile" class="thumbnail" style="background:yellow">
+            <a href="#/mobile" class="thumbnail" style="background:#F1FC46">
                 <center class="caption">Mobile</center>
-                <img data-src="holder.js/100%x180" alt="..." src="images/icons/dollarsign2.png">
+                <img data-src="holder.js/400x350" alt="..." src="images/icons/dollarsign2.png">
             </a>
         </div>
         <div class="col-xs-6 col-md-3">
-            <a href="#" class="thumbnail" style="background:pink">
+            <a href="#" class="thumbnail" style="background:#FF5C47">
                 <center class="caption">Strefy samoobsługowe</center>
-                <img data-src="holder.js/100%x180" alt="Strefy samoobsługowe" src="images/icons/office37.png">
+                <img data-src="holder.js/400x350" alt="Strefy samoobsługowe" src="images/icons/office37.png">
             </a>
         </div>
         <div class="col-xs-6 col-md-3">
-            <a href="#" class="thumbnail" style="background:orange">
+            <a href="#" class="thumbnail" style="background:#9A62AE">
                 <center class="caption">Płatności</center>
-                <img data-src="holder.js/100%x180" alt="Płatności" src="images/icons/moneybag.png">
+                <img data-src="holder.js/400x350" alt="Płatności" src="images/icons/moneybag.png">
             </a>
         </div>
     </div>
     <div class="row">
         <div class="col-xs-6 col-md-3">
-            <a href="#" class="thumbnail" style="background:#FF00FF">
-                <center class="caption">?</center>
-                <img data-src="holder.js/100%x180" alt="..." src="images/icons/appraisal.png">
+            <a href="#" class="thumbnail" style="background:#F1156A">
+                <center class="caption">Porównywarka cen</center>
+                <img data-src="holder.js/400x350" alt="..." src="images/icons/appraisal.png">
             </a>
         </div>
         <div class="col-xs-6 col-md-3">
-            <a href="#" class="thumbnail" style="background:#EEEEEE">
-                <center class="caption">??</center>
-                <img data-src="holder.js/100%x180" alt="..." src="images/icons/creditcard23.png">
-            </a>
-        </div>
-        <div class="col-xs-6 col-md-3">
-            <a href="#" class="thumbnail" style="background:#DD6666">
-                <center class="caption">???</center>
-                <img data-src="holder.js/100%x180" alt="" src="images/icons/financeandbusiness.png">
-            </a>
-        </div>
-        <div class="col-xs-6 col-md-3">
-            <a href="#" class="thumbnail" style="background:#00cc00">
-                <center class="caption">????</center>
-                <img data-src="holder.js/100%x180" alt="Płatności" src="images/icons/maths11.png">
+            <a href="#" class="thumbnail" style="background:#1D9EDA">
+                <center class="caption">Portfele elektroniczne</center>
+                <img data-src="holder.js/400x350" alt="..." src="images/icons/creditcard23.png">
             </a>
         </div>
     </div>

@@ -33,6 +33,12 @@ angular.module('angularSimpleApp')
         $http.get('data/feeds.json').success(function (data2) {
             $scope.feeds = data2;
         });
+        $http.get('data/feeds2.json').success(function (data2) {
+            $scope.feeds2 = data2;
+        });
+        $http.get('data/feeds3.json').success(function (data2) {
+            $scope.feeds3 = data2;
+        });
 
         //main2
         $http.get('data/banks.json').success(function (data2) {
