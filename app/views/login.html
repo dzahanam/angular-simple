@@ -2,13 +2,7 @@
     $(".nav").hide()
 </script>
 <div class="jumbotron image">
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <form name="loginForm" ng-controller="LoginCtrl" ng-submit="login(credentials)" novalidate>
+    <form name="loginForm" class="loginForm" ng-controller="LoginCtrl" ng-submit="login(credentials)" novalidate>
         <!--        <label for="username">Username:</label>-->
         <input type="text" id="username" ng-model="credentials.username" class="contrast" placeholder="Wprowadź login">
         <br/>
@@ -21,10 +15,4 @@
             </button>
         </a>
     </form>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
 </div>

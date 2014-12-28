@@ -59,6 +59,7 @@ body {
 .image {
     background-image: url(../images/city_new_york_nyc.jpg);
     background-size: 100%;
+    min-height: 600px;
     background-repeat: no-repeat;
 }
 .jumbotron .btn {
@@ -104,4 +105,7 @@ body {
 }
 #logo {
     width: 90px;
+}
+.loginForm {
+    margin-top: 200px;
 }
