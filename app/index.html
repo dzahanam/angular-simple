@@ -42,12 +42,12 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="dropdown active">
+                    <li class="dropdown analize">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Analizy <span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
-                            <li><a href="#/main">Internet</a>
+                            <li class="internet"><a href="#/main2">Internet</a>
                             </li>
-                            <li><a href="#/mobile">Mobile</a>
+                            <li class="mobile"><a href="#/mobile">Mobile</a>
                             </li>
                             <li><a href="#">Instytucja</a>
                             </li>
@@ -59,69 +59,24 @@
                             </li>
                         </ul>
                     </li>
-                    <li><a ng-href="#/news">Powiadomienia</a>
+                    <li class="news"><a ng-href="#/news">Powiadomienia</a>
                     </li>
-                    <li><a ng-href="#/">Instytucja</a>
+                    <li class="institution"><a ng-href="#/">Instytucja</a>
                     </li>
-                    <li><a ng-href="#/settings">Twój profil</a>
+                    <li  class="settings"><a ng-href="#/settings">Twój profil</a>
                     </li>
-                    <li><a ng-href="#/stats">Statystyki</a>
+                    <li  class="stats"><a ng-href="#/stats">Statystyki</a>
                     </li>
-                    <li><a ng-href="#/about">O nas</a>
+                    <li class="about"><a ng-href="#/about">O nas</a>
                     </li>
                     <li class="logout"><a ng-href="#">Wyloguj</a>
                     </li>
                 </ul>
-                <!--form class="navbar-form navbar-left" role="search">
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Search">
-                    </div>
-                    <button type="submit" class="btn btn-default">Submit</button>
-                </form-->
-                <!--ul class="nav navbar-nav navbar-right">
-                    <li><a href="#">Link</a>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
-                        <ul class="dropdown-menu" role="menu">
-                            <li><a href="#">Action</a>
-                            </li>
-                            <li><a href="#">Another action</a>
-                            </li>
-                            <li><a href="#">Something else here</a>
-                            </li>
-                            <li class="divider"></li>
-                            <li><a href="#">Separated link</a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul-->
             </div>
             <!-- /.navbar-collapse -->
         </div>
         <!-- /.container-fluid -->
     </nav>
-
-    <!--div class="container main">
-        <div class="header">
-            <img src="images/logo%20blue.png" id="logo"></img>
-            <ul class="nav nav-pills pull-right">
-                <li class="active"><a ng-href="#/main">Analizy</a>
-                </li>
-                <li><a ng-href="#/news">Powiadomienia</a>
-                </li>
-                <li><a ng-href="#/">Instytucja</a>
-                </li>
-                <li><a ng-href="#/settings">Twój profil</a>
-                </li>
-                <li><a ng-href="#/stats">Statystyki</a>
-                </li>
-                <li><a ng-href="#/about">O nas</a>
-                </li>
-                <li class="logout"><a ng-href="#">Wyloguj</a>
-                </li>
-            </ul>
-        </div-->
 
     <div ng-view="" class=""></div>
 

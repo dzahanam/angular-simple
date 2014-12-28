@@ -10,24 +10,8 @@
 angular.module('angularSimpleApp')
     .controller('MobileCtrl', function ($scope, $http) {
 
-        $http.get('data/internet/bzwbk_globals.json').success(function (data2) {
-            $scope.bzwbk_globals = data2;
-        });
-
-        $http.get('data/internet/orange_globals.json').success(function (data2) {
-            $scope.orange = data2;
-        });
-
-        $http.get('data/internet/ing_globals.json').success(function (data2) {
-            $scope.ing = data2;
-        });
-
-        $http.get('data/internet/smart_globals.json').success(function (data2) {
-            $scope.smart = data2;
-        });
-
-        $http.get('data/internet/millenium_globals.json').success(function (data2) {
-            $scope.millenium = data2;
+      $http.get('data/mobile/features.json').success(function (data2) {
+            $scope.features = data2;
         });
 
         $http.get('data/feeds.json').success(function (data2) {

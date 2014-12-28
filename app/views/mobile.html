@@ -34,56 +34,66 @@
     </div>
 </div>
 
-<!--div class="row well">
-           <span ng-repeat="item in feeds" ng-animate="'animate'">
-               <span class="glyphicon glyphicon-edit"></span>
-			   <a class="small" ng-click="isCollapsed = !isCollapsed" target="_blank">{{item.title}}</a>
-               </br>
-			   <div collapse="!isCollapsed" >
-			     <p>{{item.contentSnippet}} <a href="{{item.link}}">źródło: PR News</a><p>
-			   </div>
-               </br>
-           </span>
-</div-->
+<div class="btn-group" dropdown is-open="marketing.isopen">
+    <button type="button" class="btn btn-primary dropdown-toggle" ng-disabled="disabled">
+        Market News <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu" role="menu">
+        <li class="active"><a href="">Włącz</a>
+        </li>
+        <li><a href="">Wyłącz</a>
+        </li>
+    </ul>
+</div>
+<div class="btn-group" dropdown is-open="history.isopen">
+    <button type="button" class="btn btn-primary dropdown-toggle" ng-disabled="disabled">
+        Twoja historia <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu" role="menu">
+        <li class="active"><a href="">Włącz</a>
+        </li>
+        <li><a href="">Wyłącz</a>
+        </li>
+    </ul>
+</div>
+<div class="btn-group" dropdown is-open="observatory.isopen">
+    <button type="button" class="btn btn-primary dropdown-toggle" ng-disabled="disabled">
+        Obserwatorium News <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu" role="menu">
+        <li class="active"><a href="">Włącz</a>
+        </li>
+        <li><a href="">Wyłącz</a>
+        </li>
+    </ul>
+</div>
 
-<tabset>
-    <tab heading="Market News">
-        <span ng-repeat="item in feeds" ng-animate="'animate'">
-        <span class="glyphicon glyphicon-edit"></span>
+<ul class="list-group">
+    <li class="list-group-item list-group-item-success" ng-repeat="item in feeds">
         <a class="small" ng-click="isCollapsed = !isCollapsed" target="_blank">{{item.title}}</a>
-        </br>
+        <br>
         <div collapse="!isCollapsed">
             <p>{{item.contentSnippet}} <a href="{{item.link}}">źródło: PR News</a>
                 <p>
         </div>
-        </br>
-        </span>
-    </tab>
-    <tab heading="Obserwatorium News">
-        <span ng-repeat="item in feeds2" ng-animate="'animate'">
-               <span class="glyphicon glyphicon-edit"></span>
+    </li>
+    <li class="list-group-item list-group-item-info" ng-repeat="item in feeds2">
         <a class="small" ng-click="isCollapsed = !isCollapsed" target="_blank">{{item.title}}</a>
-        </br>
+        <br>
+        <div collapse="!isCollapsed">
+            <p>{{item.contentSnippet}} <a href="{{item.link}}">Więcej</a>
+                <p>
+        </div>
+    </li>   
+    <li class="list-group-item list-group-item-warning" ng-repeat="item in feeds3">
+        <a class="small" ng-click="isCollapsed = !isCollapsed" target="_blank">{{item.title}}</a>
+        <br>
         <div collapse="!isCollapsed">
             <p>{{item.contentSnippet}} <a href="{{item.link}}">źródło: PR News</a>
                 <p>
         </div>
-        </br>
-        </span>
-    </tab>
-    <tab heading="Twoja historia">
-        <span ng-repeat="item in feeds3" ng-animate="'animate'">
-               <span class="glyphicon glyphicon-edit"></span>
-        <a class="small" ng-click="isCollapsed = !isCollapsed" target="_blank">{{item.title}}</a>
-        </br>
-        <div collapse="!isCollapsed">
-            <p>{{item.contentSnippet}} <a href="{{item.link}}">źródło: PR News</a>
-                <p>
-        </div>
-        </br>
-        </span>
-    </tab>
-</tabset>
+    </li>
+</ul>
 
 <div class="row well">
     Wyszukaj:
@@ -98,43 +108,25 @@
     <table class="table table-striped">
         <thead>
             <tr>
-                <th>Charakterystyka</th>
-                <th ng-repeat="feature in bzwbk_globals| filter : feature">
-                    {{ feature.group }}
-                    <!--button type="button" class="btn btn-primary" ng-model="singleModel" btn-checkbox btn-checkbox-true="1" btn-checkbox-false="0">
-                        Raport
-                    </button-->
-<!--                    <small>Raport</small>-->
+                <th>Funkcjonalność</th>
+                <th><a href="" ng-click="predicate = 'bank1'; reverse=!reverse">BZWBK</a>
+                </th>
+                <th><a href="" ng-click="predicate = 'bank2'; reverse=!reverse">ING</a>
+                </th>
+                <th><a href="" ng-click="predicate = 'bank3'; reverse=!reverse">ORANGE</a>
+                </th>
+                <th><a href="" ng-click="predicate = 'bank4'; reverse=!reverse">Meritum</a>
                 </th>
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td><a ng-href="#/bank">BZWBK</a>
+            <tr ng-repeat="feature in features | filter:feature | orderBy:predicate:reverse">
+                <td><a href="#/category/{{feature.name}}">{{feature.name}}</a>
                 </td>
-                <td ng-repeat="row in bzwbk_globals| filter : feature"><a ng-href="#/category/{{row.link}}">{{ row.value }} <span popover="Zmiana od twojej ostatniej wizyty!" popover-trigger="mouseenter" class="badge" ng-show="row.LU">!</span></a>
-                </td>
-            </tr>
-            <tr>
-                <td>ING</td>
-                <td ng-repeat="row in ing| filter : feature"><a href="#/category/{{row.link}}">{{ row.value }} <span popover="Zmiana od twojej ostatniej wizyty!" popover-trigger="mouseenter" class="badge" ng-show="row.LU">!</span></a>
-                </td>
-            </tr>
-            <tr>
-                <td>Orange Finanse
-                    <br/>(mBank)</td>
-                <td ng-repeat="row in orange| filter : feature"><a href="#/category/{{row.link}}">{{ row.value }} <span popover="Zmiana od twojej ostatniej wizyty!" popover-trigger="mouseenter" class="badge" ng-show="row.LU">!</span></a>
-                </td>
-            </tr>
-            <tr>
-                <td>Millenium</td>
-                <td ng-repeat="row in millenium| filter : feature"><a href="#/category/{{row.link}}">{{ row.value }} <span popover="Zmiana od twojej ostatniej wizyty!" popover-trigger="mouseenter" class="badge" ng-show="row.LU">!</span></a>
-                </td>
-            </tr>
-            <tr>
-                <td>Smartbank</td>
-                <td ng-repeat="row in smart| filter : feature"><a href="#/category/{{row.link}}">{{ row.value }} <span popover="Zmiana od twojej ostatniej wizyty!" popover-trigger="mouseenter" class="badge" ng-show="row.LU">!</span></a>
-                </td>
+                <td>{{feature.bank1}}</td>
+                <td>{{feature.bank2}}</td>
+                <td>{{feature.bank3}}</td>
+                <td>{{feature.bank4}}</td>
             </tr>
         </tbody>
     </table>
@@ -154,6 +146,10 @@
 <br/>
 <br/>
 
+
 <script>
-    $(".nav").show()
+    $(".nav").show();
+    $('.navbar li.active').removeClass('active');
+    $(".analize").addClass("active");
+    $(".mobile").addClass("active");
 </script>

@@ -100,54 +100,6 @@
             </tr>
         </thead>
         <tbody>
-            <!--
-            <tr>
-                <td><a ng-href="#/bank">Aktywacja i logowanie</a>
-                </td>
-                <td ng-repeat="row in logowanie| orderBy:predicate:reverse"><a ng-href="#/category/{{row.link}}">{{ row.value }} <span popover="Zmiana od twojej ostatniej wizyty!" popover-trigger="mouseenter" class="badge" ng-show="row.LU">!</span></a>
-                </td>
-            </tr>
-            <tr>
-                <td>Informacje</td>
-                <td ng-repeat="row in informacje | filter : feature"><a href="#/category/{{row.link}}">{{ row.value }} <span popover="Zmiana od twojej ostatniej wizyty!" popover-trigger="mouseenter" class="badge" ng-show="row.LU">!</span></a>
-                </td>
-            </tr>
-            <tr>
-                <td>Transakcje</td>
-                <td ng-repeat="row in transakcje| filter : feature"><a href="#/category/{{row.link}}">{{ row.value }} <span popover="Zmiana od twojej ostatniej wizyty!" popover-trigger="mouseenter" class="badge" ng-show="row.LU">!</span></a>
-                </td>
-            </tr>
-            <tr>
-                <td>Sprzedaż wewnętrzna</td>
-                <td ng-repeat="row in wewnetrzna| filter : feature"><a href="#/category/{{row.link}}">{{ row.value }} <span popover="Zmiana od twojej ostatniej wizyty!" popover-trigger="mouseenter" class="badge" ng-show="row.LU">!</span></a>
-                </td>
-            </tr>
-            <tr>
-                <td>Sprzedaż zewnętrzne</td>
-                <td ng-repeat="row in zewnetrzna| filter : feature"><a href="#/category/{{row.link}}">{{ row.value }} <span popover="Zmiana od twojej ostatniej wizyty!" popover-trigger="mouseenter" class="badge" ng-show="row.LU">!</span></a>
-                </td>
-            </tr>
-            <tr>
-                <td>Inwestycje</td>
-                <td ng-repeat="row in zewnetrzna| filter : feature"><a href="#/category/{{row.link}}">{{ row.value }} <span popover="Zmiana od twojej ostatniej wizyty!" popover-trigger="mouseenter" class="badge" ng-show="row.LU">!</span></a>
-                </td>
-            </tr>
-            <tr>
-                <td>Usługi dodatkowe</td>
-                <td ng-repeat="row in zewnetrzna| filter : feature"><a href="#/category/{{row.link}}">{{ row.value }} <span popover="Zmiana od twojej ostatniej wizyty!" popover-trigger="mouseenter" class="badge" ng-show="row.LU">!</span></a>
-                </td>
-            </tr>
-            <tr>
-                <td>Bezpieczeństwo</td>
-                <td ng-repeat="row in zewnetrzna| filter : feature"><a href="#/category/{{row.link}}">{{ row.value }} <span popover="Zmiana od twojej ostatniej wizyty!" popover-trigger="mouseenter" class="badge" ng-show="row.LU">!</span></a>
-                </td>
-            </tr>
-            <tr>
-                <td>PFM</td>
-                <td ng-repeat="row in zewnetrzna| filter : feature"><a href="#/category/{{row.link}}">{{ row.value }} <span popover="Zmiana od twojej ostatniej wizyty!" popover-trigger="mouseenter" class="badge" ng-show="row.LU">!</span></a>
-                </td>
-            </tr>
--->
             <tr ng-repeat="feature in features | filter:feature | orderBy:predicate:reverse">
                 <td><a href="#/category/{{feature.name}}">{{feature.name}}</a>
                 </td>
@@ -175,5 +127,8 @@
 <br/>
 
 <script>
-    $(".nav").show()
+    $(".nav").show();
+    $('.navbar li.active').removeClass('active');
+    $(".analize").addClass("active");
+    $(".internet").addClass("active");
 </script>

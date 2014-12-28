@@ -1,0 +1,66 @@
+[
+    {
+        "name": "Logowanie",
+        "bank1": "93%",
+        "bank2": "60%",
+        "bank3": "60%",
+        "bank4": "60%"
+    },
+    {
+        "name": "Informacje",
+        "bank1": "55%",
+        "bank2": "78%",
+        "bank3": "60%",
+        "bank4": "65%"
+    },
+    {
+        "name": "Transakcje",
+        "bank1": "14%",
+        "bank2": "55%",
+        "bank3": "64%",
+        "bank4": "40%"
+    },
+    {
+        "name": "Sprzedaż zewnętrzna",
+        "bank1": "14%",
+        "bank2": "55%",
+        "bank3": "64%",
+        "bank4": "40%"
+    },
+    {
+        "name": "Sprzedaż wewnętrzna",
+        "bank1": "14%",
+        "bank2": "55%",
+        "bank3": "64%",
+        "bank4": "40%"
+    },
+    {
+        "name": "Inwestycje",
+        "bank1": "14%",
+        "bank2": "55%",
+        "bank3": "64%",
+        "bank4": "40%"
+    },
+    {
+        "name": "Usługi dodatkowe",
+        "bank1": "14%",
+        "bank2": "55%",
+        "bank3": "64%",
+        "bank4": "40%"
+    },
+    {
+        "name": "Bezpieczeństwo",
+        "bank1": "14%",
+        "bank2": "55%",
+        "bank3": "64%",
+        "bank4": "40%"
+    },
+    {
+        "name": "PFM",
+        "bank1": "14%",
+        "bank2": "55%",
+        "bank3": "64%",
+        "bank4": "40%"
+    }
+
+]
